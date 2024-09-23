@@ -1,0 +1,120 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: isvd-proxy-config
+  namespace: isvd-10020
+  uid: 993b5493-8d25-47a5-8513-6f98a6e55a64
+  resourceVersion: '144224948'
+  creationTimestamp: '2024-07-15T07:45:53Z'
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2024-07-15T08:20:01Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          .: {}
+          'f:config.yaml': {}
+data:
+  config.yaml: |
+    debug:
+      runtime: 65535
+      startup: false
+    general:
+      admin:
+        dn: cn=root
+        pwd: secret010
+      id: isvd-proxy-server1
+      json-logging: false
+      key-stash: "B64:EAAAAE9jV05DUGVVUTcvZXFTcHYqe1JSN1M3VWlTdk+lUB3EMXtq3uL1K7svhZ82pVAdxDF7at7i9Su7L4WfNrtSmOe+PYzspVAdxDF7at7i9Su7L4WfNrtSmOe+PYzsae8zaQ+Iq9Q="
+      license:
+        accept: standard
+        key: "R2VuZXJpYzotMToxOjCCAacGCSqGSIb3DQEHAqCCAZgwggGUAgEBMQ8wDQYJYIZIAWUDBAIBBQAwGwYJKoZIhvcNAQcBoA4EDEdlbmVyaWM6LTE6MaAAMYIBXTCCAVkCAQEwSDA8MQswCQYDVQQGEwJ1czEMMAoGA1UEChMDaWJtMQ0wCwYDVQQLEwRpc3ZhMRAwDgYDVQQDEwdzaWduaW5nAgh4PC0gxTSNfzANBglghkgBZQMEAgEFAKBpMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTIyMTAxMDA2NTgyN1owLwYJKoZIhvcNAQkEMSIEICNI9qWOUQ1SXQXNbnOMT5HDinpaosSdz13WyWX2XFLiMA0GCSqGSIb3DQEBAQUABIGARibpp/5rnoMDqO9rOSKFwx3m0bbYGgvkiJtDbHcRHTzErgvxqpYV0NLa9CpsCrzySCxiC2v5Xh4XhkalH6IABYWv+ZWRkh1aen8lshEYR1EAgs8llh3FmQ9xRGTJp1XkacRx3XI/s5dNNtWGEqoc1eX3cCXIG9WvO7Uoxc84b+I="
+      ports:
+        ldap: 9389
+        ldaps: 9636
+      pwd-encryption: aes256
+      pwd-policy:
+        enabled: true
+        failure-count-interval: 0
+        lock-duration: 300
+        lockout: true
+        max-consecutive-repeated-chars: 2
+        max-failures: 10
+        max-repeated-chars: 2
+        min-alpha-chars: 2
+        min-diff-chars: 2
+        min-length: 8
+        min-other-chars: 2
+      audit:
+        enabled: true
+        failure-only: false
+        groups-control: true
+        group-eval: true
+        json-format: false
+        log-to-file: false
+        operation:
+          add: true
+          bind: true
+          compare: true
+          delete: true
+          extended-op: true
+          extended-op-event: true
+          modify: true
+          modify-dn: true
+          search: true
+          unbind: true
+        performance: true
+        pta-bind-info: true
+      ssl:
+        auth: ServerAuth
+        cert-label: 'server-key'
+        ciphers:
+        - AES
+        - AES-128
+        fips: false
+        fips-fallback: true
+        protocols:
+        - TLS12
+        - TLS13
+    proxy:
+      allow-distributed-group-evaluation: true
+      allow-dynamic-group-evaluation: true
+      allow-non-admin: true
+      server-groups:
+      - name: serverGroup1
+        servers:
+        - bind-method: Simple
+          connection-pool-size: 5
+          id: 7398d240-b29f-103e-9dd5-8228df36d0d9
+          name: backend1
+          status-interval: 0
+          target: ldap://svc-isvd-server1:9389
+          user:
+            dn: cn=root
+            password: secret010
+        - bind-method: Simple
+          connection-pool-size: 5
+          id: 874438c0-b29f-103e-a4ec-9c1055658c40
+          name: backend2
+          status-interval: 0
+          target: ldap://svc-isvd-server2:9389
+          user:
+            dn: cn=root
+            password: secret010
+      suffixes:
+      - base: o=ibm,c=in
+        name: ibm
+        num-partitions: 2
+        servers:
+        - index: 1
+          name: backend1
+          role: primarywrite
+        - index: 2
+          name: backend2
+          role: any
+    keyfile:
+      keys:
+      - label: 'server-key'
+        key: "secret:server-crt/server-crt"
