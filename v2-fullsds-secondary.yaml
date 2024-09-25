@@ -132,6 +132,9 @@ data:
       - dn: o=sample
         object-classes:
         - organization
+      - dn: dc=pvcb,dc=vn
+        object-classes:
+        - domain
       - dn: secAuthority=Default
         object-classes:
         - secAuthorityInfo
