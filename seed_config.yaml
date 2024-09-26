@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: isvd-seed-config
-  namespace: default
+  namespace: dev-ibm-ciam
 data:
   server.pem: |
     -----BEGIN PRIVATE KEY-----
