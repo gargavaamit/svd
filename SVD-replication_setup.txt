@@ -21,7 +21,7 @@ pvc-eeec38b4-4cdf-4281-ab34-c8e1b6ef309b   45Gi       RWO            Delete     
 4) create agreement, put the host name correctly for primary: isvd-server  and secondary isvd-server-secondary :
 
 kubectl exec -it isvd-server-fbf5d5bd5-wk94s -- isvd_manage_replica -ap -h isvd-server-secondary -p 9389 -i pvcomsds2 -ph isvd-server -pp 9389
-[tushar@c27313v1 yaml]$ kubectl exec -it isvd-server-fbf5d5bd5-wk94s -- isvd_manage_replica -ap -h isvd-server-secondary -p 9389 -i isvd-server-secondary -ph isvd-server -pp 9389
+[tushar@c27313v1 yaml]$ kubectl exec -it isvd-server-fbf5d5bd5-wk94s -- isvd_manage_replica -ap -h isvd-server-secondary -p 9389 -i pvcomsds2 -ph isvd-server -pp 9389
 GLPREP008I Creating the replication credentials.
 GLPREP009I Creating the replication agreement for the suffix: dc=pvcom.
 GLPREP010I The replica, isvd-server-secondary, was successfully added to the server.
@@ -51,7 +51,7 @@ job.batch/isvd-seed created
 7) Create replica agreement
 On replica:
 pod name:isvd-server-secondary-b864f6d48-8cs5m
-kubectl exec -it isvd-server-secondary-b864f6d48-8cs5m -- isvd_manage_replica -ar -h isvd-server-secondary -p 9389 -i pvcomsds2 -s isvd-server
+kubectl exec -it isvd-server-secondary-b864f6d48-8cs5m -- isvd_manage_replica -ar -h isvd-server-secondary -p 9389 -i pvcomsds2 -s pvcomsds
 
 8) Start primary
 kubectl scale --replicas=1 deployment/isvd-server
