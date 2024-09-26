@@ -102,9 +102,9 @@ apiVersion: batch/v1
 kind: Job
 
 metadata:
-  name: isvd-seed
+  name: isvd-seed-config
   labels:
-    app: isvd-seed
+    app: isvd-seed-config
 
 
 spec:
