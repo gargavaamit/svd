@@ -209,6 +209,7 @@ spec:
         # The port on which the container will be listening.
         ports:
         - containerPort: 9636
+        - containerPort: 9389
 
         # Environment definition.
         env:
@@ -266,6 +267,10 @@ spec:
     name: isvd-server
     protocol: TCP
     nodePort: 30636
+  - port: 9389
+    name: isvd-server
+    protocol: TCP
+    nodePort: 30389
 
   selector:
     app: isvd-server
