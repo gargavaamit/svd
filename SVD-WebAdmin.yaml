@@ -105,8 +105,8 @@ data:
       servers:
       - label: my-ldap-server
         host: 172.20.191.119
-        port: 9389
-        secure: false
+        port: 9636
+        secure: true
         admin-port: 0
 
     keyfile:
