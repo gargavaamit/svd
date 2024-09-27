@@ -104,7 +104,7 @@ data:
     webadmin:
       servers:
       - label: my-ldap-server
-        host: 10.212.141.17
+        host: 172.20.191.119
         port: 9636
         secure: true
         admin-port: 0
