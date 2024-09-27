@@ -2,44 +2,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: np-svc-isvd-proxy-server1
-  namespace: isvd-10020
-  uid: bf85b94a-e81e-46c9-b609-931588e1b10d
-  resourceVersion: '144222394'
-  creationTimestamp: '2024-07-15T08:13:34Z'
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: v1
-      time: '2024-07-15T08:13:34Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:spec':
-          'f:externalTrafficPolicy': {}
-          'f:internalTrafficPolicy': {}
-          'f:ports':
-            .: {}
-            'k:{"port":9389,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:nodePort': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-            'k:{"port":9636,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:nodePort': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-          'f:selector': {}
-          'f:sessionAffinity': {}
-          'f:type': {}
+  namespace: dev-ibm-ciam
 spec:
-  clusterIP: 172.30.134.189
-  externalTrafficPolicy: Cluster
-  ipFamilies:
-    - IPv4
   ports:
     - name: isvd-proxy-ssl
       protocol: TCP
@@ -51,13 +15,6 @@ spec:
       port: 9389
       targetPort: 9389
       nodePort: 32389
-  internalTrafficPolicy: Cluster
-  clusterIPs:
-    - 172.30.134.189
   type: NodePort
-  ipFamilyPolicy: SingleStack
-  sessionAffinity: None
   selector:
     app: isvd-proxy-server1
-status:
-  loadBalancer: {}
