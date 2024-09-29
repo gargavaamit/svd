@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+   name: isvd-server
+   annotations:
+     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+     nginx.ingress.kubernetes.io/affinity: "cookie"
+spec:
+  ingressClassName: nginx-apps
+  tls:
+  - hosts:
+    - isvd-server.apps.svam.nonprod.pvcombank.io
+  rules:
+  - host: isvd-server.apps.svam.nonprod.pvcombank.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: isvd-server
+            port:
+              number: 9636
