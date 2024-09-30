@@ -17,6 +17,6 @@
         pathType: Prefix
         backend:
           service:
-            name: np-svc-isvd-proxy-server1
+            name: isvd-proxy-server1
             port:
               number: 9389
