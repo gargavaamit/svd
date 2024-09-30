@@ -19,4 +19,4 @@
           service:
             name: isvd-proxy-server1
             port:
-              number: 9389
+              number: 9443
