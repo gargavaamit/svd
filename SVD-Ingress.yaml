@@ -20,4 +20,4 @@ spec:
           service:
             name: isvd-server
             port:
-              number: 9636
+              number: 9389
