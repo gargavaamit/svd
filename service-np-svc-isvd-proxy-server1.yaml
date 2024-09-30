@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: np-svc-isvd-proxy-server1
+  name: isvd-proxy-server1
   namespace: dev-ibm-ciam
 spec:
   ports:
