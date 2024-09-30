@@ -103,11 +103,11 @@ data:
 
     webadmin:
       servers:
-      - label: my-ldap-server
-        host: 172.20.104.76
-        port: 9636
-        secure: true
-        admin-port: 0
+      - label: isvd-server
+        host: 172.20.98.1
+        port: 9389
+        secure: false
+        admin-port: 3538
 
     keyfile:
       keys:
