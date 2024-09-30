@@ -1,7 +1,7 @@
  apiVersion: networking.k8s.io/v1
  kind: Ingress
  metadata:
-   name: np-svc-isvd-proxy-server1
+   name: isvd-proxy-server1
    annotations:
      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
  spec:
@@ -19,4 +19,4 @@
           service:
             name: isvd-proxy-server1
             port:
-              number: 9443
+              number: 9389
