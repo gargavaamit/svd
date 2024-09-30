@@ -8,13 +8,8 @@ spec:
     - name: isvd-proxy-ssl
       protocol: TCP
       port: 9636
-      targetPort: 9636
-      nodePort: 32636
     - name: isvd-proxy-nonssl
       protocol: TCP
       port: 9389
-      targetPort: 9389
-      nodePort: 32389
-  type: NodePort
   selector:
     app: isvd-proxy-server1
