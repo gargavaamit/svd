@@ -134,7 +134,7 @@ data:
       - dn: o=sample
         object-classes:
         - organization
-      - dn: dc=pvcb,dc=vn
+      - dn: dc=pvb,dc=vn
         object-classes:
         - domain
       - dn: secAuthority=Default
@@ -266,7 +266,11 @@ spec:
     name: isvd-server
     protocol: TCP
     nodePort: 30636
-
+  - name: isvd-proxy-nonssl
+    protocol: TCP
+    port: 9389
+    targetPort: 9389
+    nodePort: 30389
   selector:
     app: isvd-server
 
