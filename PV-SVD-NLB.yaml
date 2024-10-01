@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nlb-usermgmt-restapp
+  name: nlb-svd-proxy
   labels:
     app: isvd-proxy-server1
   annotations:
