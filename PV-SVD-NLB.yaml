@@ -22,4 +22,4 @@ spec:
   ports:
   - port: 9389
     targetPort: 9389
-    protocol: LDAP
+    protocol: TCP
