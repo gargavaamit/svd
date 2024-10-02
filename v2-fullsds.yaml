@@ -100,20 +100,15 @@ data:
         ldap:  9389
         ldaps: 9636
       id: pvcomsds
-
       license:
         key: "R2VuZXJpYzotMToxOjCCAacGCSqGSIb3DQEHAqCCAZgwggGUAgEBMQ8wDQYJYIZIAWUDBAIBBQAwGwYJKoZIhvcNAQcBoA4EDEdlbmVyaWM6LTE6MaAAMYIBXTCCAVkCAQEwSDA8MQswCQYDVQQGEwJ1czEMMAoGA1UEChMDaWJtMQ0wCwYDVQQLEwRpc3ZhMRAwDgYDVQQDEwdzaWduaW5nAgh4PC0gxTSNfzANBglghkgBZQMEAgEFAKBpMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTIyMTAxMDA2NTgyN1owLwYJKoZIhvcNAQkEMSIEICNI9qWOUQ1SXQXNbnOMT5HDinpaosSdz13WyWX2XFLiMA0GCSqGSIb3DQEBAQUABIGARibpp/5rnoMDqO9rOSKFwx3m0bbYGgvkiJtDbHcRHTzErgvxqpYV0NLa9CpsCrzySCxiC2v5Xh4XhkalH6IABYWv+ZWRkh1aen8lshEYR1EAgs8llh3FmQ9xRGTJp1XkacRx3XI/s5dNNtWGEqoc1eX3cCXIG9WvO7Uoxc84b+I="
         accept: standard
-      
       key-stash: "B64:EAAAAGF5N3AwSHA4MGtXNm43Z0VhYmNkZWZnaGlqa2zpolze4Rgh9ZRrVSS221Id6aJc3uEYIfWUa1UktttSHVIhG/eeJxSP6aJc3uEYIfWUa1UktttSHVIhG/eeJxSPAroprsc8jYM="
-      
       admin:
         dn: cn=root
         pwd: passw0rd1
-
       ssl:
         cert-label: 'server-key'
-
       audit:
         enabled: true
         log-to-file: true
@@ -128,7 +123,22 @@ data:
           modify-dn: true
           search: true
           unbind: true
-
+      pwd-encryption: "pbkdf2-sha256"
+      pwd-policy:
+        enabled: true
+        failure-count-interval: 0
+        lock-duration: 1800
+        lockout: false
+        min-length: 12
+        max-failures: 5
+        advanced:
+          no-spaces: true
+          no-user-id: true
+          login-attribute: uid
+          min-lowercase-chars: 1
+          min-uppercase-chars: 1
+          min-numeric-chars: 1
+          min-special-chars: 1
     server:
       suffixes:
       - dn: o=sample
@@ -143,18 +153,15 @@ data:
         attributes:
         - secAuthority=Default
         - version=6.0
-
       replication:
         admin:
           dn: cn=replcred
           pwd: passw0rd2
-          
       change-log:
         enabled: false
         max-days: 56
         max-entries: 99999
         max-hours: 12
-
     keyfile:
       keys:
       - label: 'server-key'
