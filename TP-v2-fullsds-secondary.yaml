@@ -266,6 +266,11 @@ spec:
     name: isvd-secondary-server
     protocol: TCP
     nodePort: 30637
+  - name: isvd-secondary-nonssl
+    protocol: TCP
+    port: 9389
+    targetPort: 9389
+    nodePort: 30389
 
   selector:
     app: isvd-secondary-server
