@@ -185,7 +185,7 @@ spec:
     spec:
       # The name of the service account which has the required
       # capabilities enabled for the isvd container.
-      serviceAccountName: isvd
+      serviceAccountName: isvd-secondary
       securityContext:
         runAsUser: 1000
         fsGroup: 1000
