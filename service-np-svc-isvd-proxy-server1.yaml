@@ -1,15 +1,19 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: isvd-proxy-server1
-  namespace: dev-ibm-ciam
+  name: isvd-proxy
 spec:
   ports:
     - name: isvd-proxy-ssl
       protocol: TCP
       port: 9636
+      targetPort: 9636
+      nodePort: 32636
     - name: isvd-proxy-nonssl
       protocol: TCP
       port: 9389
+      targetPort: 9389
+      nodePort: 32389
+  type: NodePort
   selector:
-    app: isvd-proxy-server1
+    app: isvd-proxy
