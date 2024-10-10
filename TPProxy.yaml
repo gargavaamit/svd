@@ -1,0 +1,244 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: isvd-proxy-config
+  namespace: dev-ibm-ciam
+data:
+  server.pem: |
+    -----BEGIN PRIVATE KEY-----
+    LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVB
+    eHcyQlh1dWpTbzVMNHRmSkdJeWFaazZkeEt5SU9WSm1nMlFHNXdPUDJBMWFVWkRH
+    CkdMMGp5L1RESUJPWVpBQ3E3TFNNSVl4WWhLKzRia1F4YVVTMkgrY0FNUkdCRnkz
+    Ym5vTStBeUtaOWRnZ0pNZTAKRkhXZGJoU2xLa0J0eE5ZODhpT2V1Sm1tWTBlRWc0
+    bndQMjU0bXZFTWtsWFhlckVWOG4yWjc5TmM1Q2JvWDAweApJMHJEL3ZZRVRjVVQ3
+    Qy9BazZlcjlmb2tWckg1ZDBxZWhlMEFNekVseWdDRSthUzBoTzVBVDRidzA0ZTU0
+    WU1PClpuVkFzaG9Xd0pGSCtwOE1YWHRXVXRYUzFvTzA0OEUxNDFPOW94b2tNRG5R
+    RnlIUGpEbFNnZ291aEJxMEVSSVoKSjJYRDlzczJwTzF0YlpZajhOUWhlUmVBaDdj
+    VUdrWmVhMkoraHdJREFRQUJBb0lCQVFDLy9vSFRlWHVXVlN4VApFQW55dU9QUVhI
+    SUdtdGdHV2psdzhGRk1ELzUxeVdOZG0wUEg1dCtaUVd2WUM2NklmckJmQWtMTHRT
+    QklVMm1VClNnaFMzaWpCR3NIdmtrK3VlTmdGeTlkTGxOdGw2dUlPTitXMWVrQ3dS
+    ZytOY25tdVMycWJyOG5QaXJ5WHRBclkKQ1h1RzQxcEhNTXdNZGVvU2VLNlBwNkNN
+    VjVXWXBVd1VnSkg5TC8xZzFjK0d4cjdYSjc2K25VTkxlYjJaZlE5MgpHOEpHdjhS
+    OWdEZ3VlRy9IYXV0TVNQd0lIUnVpQkhpTUdodk84aTB3OVNzNFRKbG1ob1ZZMnVw
+    akg2d2NXRnV0CllCOVRJdVgySTROSmZCSWpCRkpsd1ltb09EakIrVklsaXdBY0ZW
+    SFhmOWNEWjVzTVpnT01KYUxHUnJLN2dBWWgKS1phVFpUZ0JBb0dCQVA1cFZiUHMx
+    bzF4S2xkbHZxUzA4akpqRFBMakJtV0RDc1RqLzZSS3BUQStydjFITkY4cwpaQUlt
+    andUR0VKZSt4ZVpNVHEzalVsTjhKWnNCVzIvRTdUQ3V0NXEwa1l0UmhjYnBqNnNn
+    aTVObFF5UGtUK0lECkphbGxERitYaHZHOXZoQkFqbzRxYktabW90bytSMC9kUVli
+    RmFBc3UxdllJMEJtY2c2c29tV0tIQW9HQkFNaEwKcnFPcW9udmIyOWxPVkgvN2U3
+    aGpKMm5TRE1YYk5pR1FubjZ6MThjV3lZQTA0SFhnQUI2cTVWZ3VTTmRsMjZaWQpJ
+    SDBoeUluZlo4Q0xBMkNPMHJUaVVrOGs2UUVJWElseExuY2tnSzU4MVNMellDaEhB
+    clZCcGo0bWNqVkZFRWZLCm5OajBYNmNWT1NVeGI2RzJlYStmdURZalZlNllCQncx
+    aVoyRmlRUUJBb0dBQ00vaE5oQTRCa0lyTTBmRTZMT1QKeUFjQ1JjOXpRMFRjdEtF
+    cEU2bTZPd2VRekJrUlNWS2lUQ2pGdjJhVTRJeXRFaU1HZnFObkVKazJQRDQ1eW85
+    SgpuK3dOVkFCNUloZzZ4LzhEQ094aHFVTlNwZ1djZHJtaExsTGZzTmZ3eHFMSjJJ
+    cEQ1Y3kyWXJVZll1dlJVSVRiClppMmtRdTdtWnpNNjhnZ256MS9pb0RVQ2dZQXhQ
+    U0cyakdrYlI4WTVHcDk5UXVaOFFxdmF3TTl4Q0YyN1RLRWEKQnI0aDdFRW02bGpQ
+    d1h4bURaOEoyWDhBck1LZGx3YU5uSE4vS1ZPSkt1TnVwazI0Ti9jQ0M5SFg5aVZC
+    aUhoaQp3Njk2dGFkenl4NjFhQmVMVlpNM3JoM2ZhSllEQUJVazVKWnJMYlY1cGpp
+    S0thQ3Fndm8zSE9Ld0grREt5b0tGCkhlRzhBUUtCZ0FRYk9oQ1Z4TjRURktOM0Vq
+    STYydzNFRDEzeTNPdWJDakViTWxONDkwcmxKUGRuTitFVmxBb1EKMWNLWGxBOGNh
+    VHJBSy96dTB3QmkvbTRnaUNTcGNiQ00yZ0plZmZ4b2d6WmNDL1hkSDlpTmxnb1Q0
+    Q3YrUTZRSAptUnhVdUhIZkp2bXgyY0FBcUFZVUMrOEszQ3J1SW94SUJNd0dMY0tq
+    OW1Jd2Q2cWNvTDNTCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+    -----END PRIVATE KEY-----
+    -----BEGIN CERTIFICATE-----
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZJVENDQkFtZ0F3SUJBZ0lT
+    Qkl0VjNlVG90UzJ6bmlteUVwdVJxRUN5TUEwR0NTcUdTSWIzRFFFQkN3VUEKTURN
+    eEN6QUpCZ05WQkFZVEFsVlRNUll3RkFZRFZRUUtFdzFNWlhRbmN5QkZibU55ZVhC
+    ME1Rd3dDZ1lEVlFRRApFd05TTVRBd0hoY05NalF4TURBeE1EWTFNVEEwV2hjTk1q
+    UXhNak13TURZMU1UQXpXakEwTVRJd01BWURWUVFECkV5bHBjM1prTFhCeWIzaDVM
+    bUZ3Y0hNdWMzWmhiUzV1YjI1d2NtOWtMbkIyWTI5dFltRnVheTVwYnpDQ0FTSXcK
+    RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQU1jTmdWN3JvMHFP
+    UytMWHlSaU1tbVpPbmNTcwppRGxTWm9Oa0J1Y0RqOWdOV2xHUXhoaTlJOHYwd3lB
+    VG1HUUFxdXkwakNHTVdJU3Z1RzVFTVdsRXRoL25BREVSCmdSY3QyNTZEUGdNaW1m
+    WFlJQ1RIdEJSMW5XNFVwU3BBYmNUV1BQSWpucmlacG1OSGhJT0o4RDl1ZUpyeERK
+    SlYKMTNxeEZmSjltZS9UWE9RbTZGOU5NU05Ldy83MkJFM0ZFK3d2d0pPbnEvWDZK
+    RmF4K1hkS25vWHRBRE14SmNvQQpoUG1rdElUdVFFK0c4Tk9IdWVHRERtWjFRTElh
+    RnNDUlIvcWZERjE3VmxMVjB0YUR0T1BCTmVOVHZhTWFKREE1CjBCY2h6NHc1VW9J
+    S0xvUWF0QkVTR1NkbHcvYkxOcVR0YlcyV0kvRFVJWGtYZ0llM0ZCcEdYbXRpZm9j
+    Q0F3RUEKQWFPQ0Fpd3dnZ0lvTUE0R0ExVWREd0VCL3dRRUF3SUZvREFkQmdOVkhT
+    VUVGakFVQmdnckJnRUZCUWNEQVFZSQpLd1lCQlFVSEF3SXdEQVlEVlIwVEFRSC9C
+    QUl3QURBZEJnTlZIUTRFRmdRVWlvZk5hQ256Z1U5bStJN3lRc2FxCkVsL0JWOFV3
+    SHdZRFZSMGpCQmd3Rm9BVXU3ekRSNlhrdktuR3c2UnlEQkNOb2pYaHlPZ3dWd1lJ
+    S3dZQkJRVUgKQVFFRVN6QkpNQ0lHQ0NzR0FRVUZCekFCaGhab2RIUndPaTh2Y2pF
+    d0xtOHViR1Z1WTNJdWIzSm5NQ01HQ0NzRwpBUVVGQnpBQ2hoZG9kSFJ3T2k4dmNq
+    RXdMbWt1YkdWdVkzSXViM0puTHpBMEJnTlZIUkVFTFRBcmdpbHBjM1prCkxYQnli
+    M2g1TG1Gd2NITXVjM1poYlM1dWIyNXdjbTlrTG5CMlkyOXRZbUZ1YXk1cGJ6QVRC
+    Z05WSFNBRUREQUsKTUFnR0JtZUJEQUVDQVRDQ0FRTUdDaXNHQVFRQjFua0NCQUlF
+    Z2ZRRWdmRUE3d0IyQUQ4WFMwL1hJa2RZbEIxbApISVMrRFJMdGtEZC9INFZxNjhH
+    L0tJWHMrR1J1QUFBQmtrY09WVWNBQUFRREFFY3dSUUlnYzlFb2FTLzRycjlkCnRv
+    K0U1Q0xZT24yRW81NXEydmp4WW1vNFArbVY4R2NDSVFDQ0xWRnRmWWtCamJ4ZHRa
+    NG5oZE9EV3g0eTRvOGgKenV5K3FWL0FmTDIrd0FCMUFOL2hWdXVxQmErMW5BK0dj
+    WTJvd0RKT3JsYlpicWYxcFdvQjBjRTd2bEpjQUFBQgpra2NPVmhZQUFBUURBRVl3
+    UkFJZ01lZTFqY2ErZjNIa2U0YmRWOUV4WG9QTlBGKytmSFd3Rkc3bWhad3F0aTBD
+    CklGdWNLRWlYMkdNNFZobDdRQVEzOVNXckNXakE5UjVHdVlDbGRNd0VpalJYTUEw
+    R0NTcUdTSWIzRFFFQkN3VUEKQTRJQkFRQm9PY2w3aE1seG80VlovdDVFSzMxSmhJ
+    bVpVdmFscTRRcmllQmNWSmdNM21lMTB0TTFFaStRNDJaZAo0c25rZ2FxTXQ2Znpm
+    ZzRGQit0T0NFS0RqczNBL1owU04wODNiNnlNdDg1Z3MwOVdBMVVsYmUvQnBWUk9i
+    UUh5CnNTcituN29nU1dRZTRzL3p4ZVQxMWZVTFRPVkthR3ZadDZnaXJWUGlmU0lI
+    WUdaZ2M5UWgrK21hRklyd3hON1cKMDBwOUJRTTk4MG0yTDhRY1llSW1IelpNMG1h
+    MlBpZkNleVdOOXczcWpCQlk4REM5LzF0R1puOXFxWUFWUHVjUQppK3BzQWdocnRa
+    a0pkelBhMVFBRTZ4Y3lsQ2pUL0VDSmY1SW9lRFJwQ2FISU9MSS85OHAvblB3eXRK
+    dHQveUk4ClA4UC80TGlqWWpKcUJRY1FuMDE5OU5xdUYxKzAKLS0tLS1FTkQgQ0VS
+    VElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRkJU
+    Q0NBdTJnQXdJQkFnSVFTNmhTay9lYUw2SnpCa3VvQkkxMTBEQU5CZ2txaGtpRzl3
+    MEJBUXNGQURCUApNUXN3Q1FZRFZRUUdFd0pWVXpFcE1DY0dBMVVFQ2hNZ1NXNTBa
+    WEp1WlhRZ1UyVmpkWEpwZEhrZ1VtVnpaV0Z5ClkyZ2dSM0p2ZFhBeEZUQVRCZ05W
+    QkFNVERFbFRVa2NnVW05dmRDQllNVEFlRncweU5EQXpNVE13TURBd01EQmEKRncw
+    eU56QXpNVEl5TXpVNU5UbGFNRE14Q3pBSkJnTlZCQVlUQWxWVE1SWXdGQVlEVlFR
+    S0V3MU1aWFFuY3lCRgpibU55ZVhCME1Rd3dDZ1lEVlFRREV3TlNNVEF3Z2dFaU1B
+    MEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURQVitYbXhGUVM3
+    YlJIL3NrbldIWkdVQ2lNSFQ2STN3V2QxYlVZS2IzZHRWcS8rdmJPbzc2dkFDRkwK
+    WWxwYVBBRXZ4VmdEOW9uL2poRkQ2OEcxNEJRSGxvOXZIOWZudW9FNUNYVmx0OEt2
+    R0ZzM0ppam5vL1FISzIwYQovNnRZdkpXdVFQL3B5MWZFdFZ0L2VBMFlZYndYNTFU
+    R3UwbVJ6VzRZMFlDRjdxWmxOcngwNnJ4UVRPcjhJZk00CkZwT1V1ckRUYXpnR3pS
+    WVNlc3BTZGNpdGRyTENuRjJZUlZ4dllYdkdMZTQ4RTFLR0FkbFg1amdjMzQyMUg1
+    S1IKbXVkS0hNeEZxSEpWOExEbW93ZnMvYWNiWnA0L1NJdHhoSEZZeVRyNjcxN3lX
+    MFFyUEhUbmo3Skh3UWRxelpxMwpEWmIzRW9FbVVWUUs3R0gyOS9YaThvcklsUTJO
+    QWdNQkFBR2pnZmd3Z2ZVd0RnWURWUjBQQVFIL0JBUURBZ0dHCk1CMEdBMVVkSlFR
+    V01CUUdDQ3NHQVFVRkJ3TUNCZ2dyQmdFRkJRY0RBVEFTQmdOVkhSTUJBZjhFQ0RB
+    R0FRSC8KQWdFQU1CMEdBMVVkRGdRV0JCUzd2TU5IcGVTOHFjYkRwSElNRUkyaU5l
+    SEk2REFmQmdOVkhTTUVHREFXZ0JSNQp0Rm5tZTdibDVBRnpnQWlJeUJwWTl1bWJi
+    akF5QmdnckJnRUZCUWNCQVFRbU1DUXdJZ1lJS3dZQkJRVUhNQUtHCkZtaDBkSEE2
+    THk5NE1TNXBMbXhsYm1OeUxtOXlaeTh3RXdZRFZSMGdCQXd3Q2pBSUJnWm5nUXdC
+    QWdFd0p3WUQKVlIwZkJDQXdIakFjb0JxZ0dJWVdhSFIwY0RvdkwzZ3hMbU11YkdW
+    dVkzSXViM0puTHpBTkJna3Foa2lHOXcwQgpBUXNGQUFPQ0FnRUFrckhuUVRmcmVa
+    MkI1czNpSmVFNklPbVFSSldqZ1Z6UHcxMzl2YUJ3MWJHV0tDSUwwdklvCnp3em4x
+    T1pEakNRaUhjRkNrdEVKcjU5TDlNaHdUeUFXc1ZyZEFmWWYrQjloYXhRbnNIS05Z
+    Njd1NHM1THp6ZmQKdTZQVXplZXRVSzI5ditQc1BtSTJjSmt4cCtpTjNlcGk0aEt1
+    OVp6VVBTd01xdENjZWI3cVBWeEVicFl4WTFwOQoxbjVQSktCTEJYOWViOUxVNmw4
+    elN4UFdWN2JLM2xHNFhhTUpnblQ5eDNpZXM3bXNGdHBLSzViRHRvdGlqL2wwCkdh
+    S2VBOTdwYjV1d0Q5S2dXdmFGWE1JRXQ4alZUakxFdndSZHZDbjI5NEdQREYwOFU4
+    bEFrSXY3dGdobHVhUWgKMVFubEU0U0VONExPRUNqOGRzSUdKWHBHVWszYVUzS2tK
+    ejlpY0t5K2FVZ0ErMmNQMjF1aDZOY0RJUzNYeWZhWgpRam1EUTk5M0NoSUk4U1hX
+    dXBRWlZCaUlwY1dPNFJxWmszbHI3Qno1TVVDd3pESUEzNTllNTdTU3E1Q0NrWTBO
+    CjRCNlZ1bGs3TGt0ZndyZEdOVkk1QnNDOXFxeFN3U0tnUkplWjl3eWdJYWVoYkhG
+    SEZoY0JhTURLcGlabEJIeXoKcnNubmxGWENiNXM4SEtuNUxzVWdHdkIyNEw3c0dO
+    WlAyQ1g3ZGhIb3YrWWhEK2pvekxXMnA5VzQ5NTlCejJFaQpSbXFEdG1pWExuenFU
+    cFhiSStzdXlDc29oS1JnNlVuMFJDNDcrY3BpVndIaVhaQVcrY244ZWlOSWpxYlZn
+    WEx4CktQcGR6dnZ0VG5PUGxDN1NRWlNZbWR1bnIzQmY5Yjc3QWlDL1ppZHN0SzM2
+    ZFJJTEt6N09BNTQ9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    -----END CERTIFICATE-----
+
+  config.yaml: |
+    debug:
+      startup: true
+    general:
+      admin:
+        pwd: passw0rd1
+      id: test-proxy-server1
+      key-stash: "B64:EAAAAE9jV05DUGVVUTcvZXFTcHYqe1JSN1M3VWlTdk+lUB3EMXtq3uL1K7svhZ82pVAdxDF7at7i9Su7L4WfNrtSmOe+PYzspVAdxDF7at7i9Su7L4WfNrtSmOe+PYzsae8zaQ+Iq9Q="
+      license:
+        accept: standard
+        key: "R2VuZXJpYzotMToxOjCCAacGCSqGSIb3DQEHAqCCAZgwggGUAgEBMQ8wDQYJYIZIAWUDBAIBBQAwGwYJKoZIhvcNAQcBoA4EDEdlbmVyaWM6LTE6MaAAMYIBXTCCAVkCAQEwSDA8MQswCQYDVQQGEwJ1czEMMAoGA1UEChMDaWJtMQ0wCwYDVQQLEwRpc3ZhMRAwDgYDVQQDEwdzaWduaW5nAgh4PC0gxTSNfzANBglghkgBZQMEAgEFAKBpMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTIyMTAxMDA2NTgyN1owLwYJKoZIhvcNAQkEMSIEICNI9qWOUQ1SXQXNbnOMT5HDinpaosSdz13WyWX2XFLiMA0GCSqGSIb3DQEBAQUABIGARibpp/5rnoMDqO9rOSKFwx3m0bbYGgvkiJtDbHcRHTzErgvxqpYV0NLa9CpsCrzySCxiC2v5Xh4XhkalH6IABYWv+ZWRkh1aen8lshEYR1EAgs8llh3FmQ9xRGTJp1XkacRx3XI/s5dNNtWGEqoc1eX3cCXIG9WvO7Uoxc84b+I="
+      ports:
+        ldap: 9389
+        ldaps: 9636
+      ssl:
+        cert-label: 'server-key'
+      audit:
+        enabled: true
+    proxy:
+      server-groups:
+      - name: serverGroup1
+        servers:
+        - bind-method: Simple
+          id: pvcomsds
+          name: pvcomsds
+          target: ldaps://isvd-server:9636
+          user:
+            dn: cn=root
+            password: passw0rd1
+      suffixes:
+      - base: o=sample
+        name: sample
+        num-partitions: 1
+        servers:
+        - index: 1
+          name: pvcomsds
+          role: primarywrite
+      - base: dc=pvb,dc=vn
+        name: pvb
+        num-partitions: 1
+        servers:
+        - index: 1
+          name: pvcomsds
+          role: primarywrite
+      - base: secAuthority=Default
+        name: secAuthority
+        num-partitions: 1
+        servers:
+        - index: 1
+          name: pvcomsds
+          role: primarywrite
+    keyfile:
+      keys:
+      - label: 'server-key'
+        key: "@/var/isvd/config/server.pem"
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: isvd-proxy-server1
+  namespace: dev-ibm-ciam
+  labels:
+    app: isvd-proxy-server1
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: isvd-proxy-server1
+
+  template:
+    metadata:
+      labels:
+        app: isvd-proxy-server1
+
+    spec:
+      restartPolicy: Always
+      serviceAccountName: isvd
+      serviceAccount: isvd
+
+      containers:
+        - name: isvd-proxy-server1
+          
+          readinessProbe:
+            exec:
+              command:
+                - /sbin/health_check.sh
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+
+          livenessProbe:
+            exec:
+              command:
+                - /sbin/health_check.sh
+                - livenessProbe
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+
+          env:
+            - name: YAML_CONFIG_FILE
+              value: /var/isvd/config/config.yaml
+
+          ports:
+            - containerPort: 9636
+            
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: config-volume
+              mountPath: /var/isvd/config
+          image: 'icr.io/isvd/verify-directory-proxy:latest'
+
+      volumes:
+        - name: config-volume
+          configMap:
+            name: isvd-proxy-config
