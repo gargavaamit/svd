@@ -16,4 +16,4 @@ spec:
       nodePort: 32389
   type: NodePort
   selector:
-    app: isvd-proxy
+    app: isvd-proxy-server1
