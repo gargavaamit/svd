@@ -273,6 +273,6 @@ spec:
     nodePort: 30387
 
   selector:
-    app: isvd-secondary-server
+    app: isvd-server-secondary
 
   type: NodePort
