@@ -134,7 +134,7 @@ data:
       - dn: o=sample
         object-classes:
         - organization
-      - dn: dc=pvcb,dc=vn
+      - dn: dc=pvb,dc=vn
         object-classes:
         - domain
       - dn: secAuthority=Default
