@@ -108,6 +108,17 @@ data:
         port: 9389
         secure: false
         admin-port: 3538
+      - label: isvd-server-secondary
+        host: 172.20.59.59
+        port: 9389
+        secure: false
+        admin-port: 3538
+      - label: isvd-proxy
+        host: 172.20.85.196
+        port: 9636
+        secure: false
+        admin-port: 3538
+        
 
     keyfile:
       keys:
