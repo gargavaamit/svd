@@ -270,7 +270,7 @@ spec:
     protocol: TCP
     port: 9389
     targetPort: 9389
-    nodePort: 30389
+    nodePort: 30387
 
   selector:
     app: isvd-secondary-server
