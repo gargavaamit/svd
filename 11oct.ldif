@@ -1,0 +1,1989 @@
+version: 1
+
+#/opt/ibm/ldap/V10.0.3/sbin/64/db2ldif -I idsldap -o 11oct.ldif 
+
+dn: cn=crypto,cn=localhost
+cn: crypto
+objectclass: ibm-cryptoConfig
+objectclass: ibm-slapdConfigEntry
+objectclass: top
+ibm-slapdCryptoSync: ay7p0Hp80kW6n7gE
+ibm-slapdCryptoSalt: abcdefghijkl
+ibm-entryuuid: a5d018c0-1147-103f-a1f7-d94a5b775cd0
+
+
+dn: CN=IBMPOLICIES
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuNDc2Nj
+ g4WjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MTEyMy40NzY2ODha
+cn: IBMpolicies
+objectclass: container
+objectclass: top
+objectclass: ibm-replicationContext
+ibm-entryuuid: a5d018c0-1147-103f-a1f0-d94a5b775cd0
+
+dn: IBM-REPLICAGROUP=DEFAULT,CN=IBMPOLICIES
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuNDg1Mz
+ QwWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MTEyMy40ODUzNDBa
+objectclass: top
+objectclass: ibm-replicaGroup
+ibm-replicaGroup: default
+ibm-entryuuid: a5d018c0-1147-103f-a1f1-d94a5b775cd0
+aclpropagate: TRUE
+ownerpropagate: TRUE
+entryowner: access-id:CN=ROOT
+aclentry: group:CN=ANYBODY
+
+dn: globalGroupName=GlobalAdminGroup,cn=ibmpolicies
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuNDk1Mj
+ E2WjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MTEyMy40OTUyMTZa
+globalGroupName: GlobalAdminGroup
+objectclass: top
+objectclass: ibm-globalAdminGroup
+ibm-entryuuid: a5d018c0-1147-103f-a1f3-d94a5b775cd0
+
+dn: cn=pwdpolicy,cn=ibmpolicies
+control: 1.3.18.0.2.10.19 false:: MIQAAADYMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuNTAzMz
+ M4WjCEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBAD
+ CEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODA4NTYxOC4wNDAxNTBa
+objectclass: container
+objectclass: pwdPolicy
+objectclass: ibm-pwdPolicyExt
+objectclass: ibm-pwdGroupAndIndividualPolicies
+objectclass: top
+cn: pwdPolicy
+pwdAttribute: userPassword
+ibm-pwdGroupAndIndividualEnabled: false
+passwordMaxConsecutiveRepeatedChars: 0
+passwordMaxRepeatedChars: 0
+passwordMinAlphaChars: 0
+passwordMinDiffChars: 0
+passwordMinOtherChars: 0
+pwdAllowUserChange: true
+pwdCheckSyntax: 0
+pwdExpireWarning: 0
+pwdFailureCountInterval: 0
+pwdGraceLoginLimit: 0
+pwdInHistory: 0
+pwdLockout: true
+pwdMaxAge: 0
+pwdMinAge: 0
+pwdMinLength: 0
+pwdMustChange: true
+pwdSafeModify: true
+ibm-pwdPolicy: true
+ibm-pwdPolicyStartTime: 20241008084657.451119Z
+pwdLockoutDuration: 300
+pwdMaxFailure: 5
+ibm-entryuuid: a5d018c0-1147-103f-a1f4-d94a5b775cd0
+
+dn: CN=REPLICATION,CN=IBMPOLICIES
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuNTEyNT
+ gxWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MTEyMy41MTI1ODFa
+cn: REPLICATION
+objectclass: container
+objectclass: top
+ibm-entryuuid: a5d018c0-1147-103f-a1f6-d94a5b775cd0
+
+dn: o=sample
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuODU1Mzk4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MC45NTcwOTla
+o: sample
+objectclass: organization
+objectclass: top
+objectclass: ibm-replicationContext
+ibm-entryuuid: a5d018c0-1147-103f-a1f9-d94a5b775cd0
+aclpropagate: TRUE
+ownerpropagate: TRUE
+entryowner: access-id:CN=ROOT
+entryowner: group:CN=SECURITYGROUP,SECAUTHORITY=DEFAULT
+aclentry: group:CN=REMOTE-ACL-USERS,CN=SECURITYGROUPS,SECAUTHORITY=DEFAULT:nor
+ mal:rsc:system:rsc:at.secAcctValid:rwsc:at.secPwdFailCountTime:rwsc:at.secPw
+ dFailures:rwsc:at.secPwdLastChanged:rwsc:at.secPwdLastFailed:rwsc:at.secPwdL
+ astUsed:rwsc:at.secPwdUnlockTime:rwsc:at.secPwdValid:rwsc
+aclentry: group:CN=IVACLD-SERVERS,CN=SECURITYGROUPS,SECAUTHORITY=DEFAULT:norma
+ l:rsc:system:rsc:at.userPassword:wc:at.secAcctValid:rwsc:at.secPwdFailCountT
+ ime:rwsc:at.secPwdFailures:rwsc:at.secPwdLastChanged:rwsc:at.secPwdLastFaile
+ d:rwsc:at.secPwdLastUsed:rwsc:at.secPwdUnlockTime:rwsc:at.secPwdValid:rwsc
+aclentry: group:CN=SECURITYGROUP,SECAUTHORITY=DEFAULT:object:ad:normal:rwsc:se
+ nsitive:rwsc:critical:rwsc:system:rsc
+aclentry: group:CN=ANYBODY:normal:rsc:system:rsc:restricted:rsc
+
+dn: dc=pvcb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuODU5MjY4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43NDQxNzda
+dc: pvcb
+objectclass: domain
+objectclass: top
+ibm-entryuuid: a5d018c0-1147-103f-a1fa-d94a5b775cd0
+aclpropagate: TRUE
+ownerpropagate: TRUE
+entryowner: access-id:CN=ROOT
+entryowner: group:CN=SECURITYGROUP,SECAUTHORITY=DEFAULT
+aclentry: group:CN=REMOTE-ACL-USERS,CN=SECURITYGROUPS,SECAUTHORITY=DEFAULT:nor
+ mal:rsc:system:rsc:at.secAcctValid:rwsc:at.secPwdFailCountTime:rwsc:at.secPw
+ dFailures:rwsc:at.secPwdLastChanged:rwsc:at.secPwdLastFailed:rwsc:at.secPwdL
+ astUsed:rwsc:at.secPwdUnlockTime:rwsc:at.secPwdValid:rwsc
+aclentry: group:CN=IVACLD-SERVERS,CN=SECURITYGROUPS,SECAUTHORITY=DEFAULT:norma
+ l:rsc:system:rsc:at.userPassword:wc:at.secAcctValid:rwsc:at.secPwdFailCountT
+ ime:rwsc:at.secPwdFailures:rwsc:at.secPwdLastChanged:rwsc:at.secPwdLastFaile
+ d:rwsc:at.secPwdLastUsed:rwsc:at.secPwdUnlockTime:rwsc:at.secPwdValid:rwsc
+aclentry: group:CN=SECURITYGROUP,SECAUTHORITY=DEFAULT:object:ad:normal:rwsc:se
+ nsitive:rwsc:critical:rwsc:system:rsc
+aclentry: group:CN=ANYBODY:normal:rsc:system:rsc:restricted:rsc
+
+dn: secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODExMjMuODYxMzEzWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wOTU5ODNa
+objectclass: secAuthorityInfo
+objectclass: top
+objectclass: cimLogicalElement
+objectclass: cimManagedElement
+objectclass: cimManagedSystemElement
+objectclass: eSystem
+objectclass: eApplicationSystem
+objectclass: ibm-replicationContext
+secAuthority: Default
+version: 6.0
+installDate: 20240927183546.0Z
+ibm-entryuuid: a5d018c0-1147-103f-a1fb-d94a5b775cd0
+aclpropagate: TRUE
+ownerpropagate: TRUE
+entryowner: group:CN=SECURITYGROUP,SECAUTHORITY=DEFAULT
+aclentry: group:CN=REMOTE-ACL-USERS,CN=SECURITYGROUPS,SECAUTHORITY=DEFAULT:nor
+ mal:rsc:system:rsc:at.secAcctValid:rwsc:at.secPwdFailCountTime:rwsc:at.secPw
+ dFailures:rwsc:at.secPwdLastChanged:rwsc:at.secPwdLastFailed:rwsc:at.secPwdL
+ astUsed:rwsc:at.secPwdUnlockTime:rwsc:at.secPwdValid:rwsc
+aclentry: group:CN=IVACLD-SERVERS,CN=SECURITYGROUPS,SECAUTHORITY=DEFAULT:norma
+ l:rsc:system:rsc:at.userPassword:wc:at.secAcctValid:rwsc:at.secPwdFailCountT
+ ime:rwsc:at.secPwdFailures:rwsc:at.secPwdLastChanged:rwsc:at.secPwdLastFaile
+ d:rwsc:at.secPwdLastUsed:rwsc:at.secPwdUnlockTime:rwsc:at.secPwdValid:rwsc
+aclentry: group:CN=SECURITYGROUP,SECAUTHORITY=DEFAULT:object:ad:normal:rwsc:se
+ nsitive:rwsc:critical:rwsc:system:rsc
+
+dn: cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTM5NjI5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41Mzk2Mjla
+objectclass: container
+objectclass: top
+cn: Users
+ibm-entryuuid: 0dd42e40-114b-103f-a1fc-d94a5b775cd0
+
+dn: cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTQyMTI4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NDIxMjha
+objectclass: container
+objectclass: top
+cn: Groups
+ibm-entryuuid: 0dd42e40-114b-103f-a1fd-d94a5b775cd0
+
+dn: cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTQzNjc5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NDM2Nzla
+objectclass: container
+objectclass: top
+cn: SecurityGroups
+ibm-entryuuid: 0dd42e40-114b-103f-a1fe-d94a5b775cd0
+
+dn: cn=Policies,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTQ0OTk0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NDQ5OTRa
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: 0dd42e40-114b-103f-a1ff-d94a5b775cd0
+
+dn: cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTQ2MzY0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NDYzNjRa
+objectclass: container
+objectclass: top
+cn: SecurityDaemons
+ibm-entryuuid: 0dd42e40-114b-103f-a200-d94a5b775cd0
+
+dn: cn=Subdomains,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTQ3Njk0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NDc2OTRa
+objectclass: container
+objectclass: top
+cn: Subdomains
+ibm-entryuuid: 0dd42e40-114b-103f-a201-d94a5b775cd0
+
+dn: cn=Resources,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTQ5MTYzWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NDkxNjNa
+objectclass: container
+objectclass: top
+cn: Resources
+ibm-entryuuid: 0dd42e40-114b-103f-a202-d94a5b775cd0
+
+dn: cn=ResourceGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTUwNDk4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NTA0OTha
+objectclass: container
+objectclass: top
+cn: ResourceGroups
+ibm-entryuuid: 0dd42e40-114b-103f-a203-d94a5b775cd0
+
+dn: cn=Default,cn=Policies,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTUxODM5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41NTE4Mzla
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Default
+maxFailedLogins: 10
+numberWarnDays: 5
+passwordMaxAge: 7862400
+passwordMinAge: 0
+passwordMaxRepeatedChars: 2
+passwordMinAlphaChars: 4
+passwordMinDiffChars: 3
+passwordMinLength: 8
+passwordMinOtherChars: 1
+passwordReuseNum: 5
+passwordTimeReuse: 0
+timeExpireLockout: 180
+ibm-entryuuid: 0dd42e40-114b-103f-a204-d94a5b775cd0
+
+dn: cn=SecurityGroup,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTg3NTU2Wj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwMjI5NDguMzgwMzQ1Wg==
+objectclass: top
+objectclass: groupOfNames
+cn: SecurityGroup
+description: DO NOT MODIFY: Access Manager identity
+ibm-entryuuid: 0dd42e40-114b-103f-a205-d94a5b775cd0
+member: secAuthority=Default
+member: cn=SecurityMaster,secAuthority=Default
+member: cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
+member: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDae
+ mons,secAuthority=Default
+member: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+member: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+
+dn: cn=SecurityGroup,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNTg5Njc4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni41ODk2Nzha
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: SecurityGroup
+secUUID: 4f9b4bc0-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=SecurityGroup,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a206-d94a5b775cd0
+
+dn: cn=ivacld-servers,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjEyMzQyWj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwMjI5NDguMzg0NTI4Wg==
+objectclass: top
+objectclass: groupOfNames
+cn: ivacld-servers
+description: DO NOT MODIFY: Controls local cache mode ACL servers
+ibm-entryuuid: 0dd42e40-114b-103f-a207-d94a5b775cd0
+member: secAuthority=Default
+member: cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
+member: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDae
+ mons,secAuthority=Default
+member: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+member: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+
+dn: cn=ivacld-servers,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjE0MjQ3Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni42MTQyNDda
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: ivacld-servers
+secUUID: 4f9f4482-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=ivacld-servers,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a208-d94a5b775cd0
+
+dn: cn=remote-acl-users,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjE5MjEzWj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwMjI5NDguMzg1ODAxWg==
+objectclass: top
+objectclass: groupOfNames
+cn: remote-acl-users
+description: DO NOT MODIFY: Controls remote cache mode ACL servers
+ibm-entryuuid: 0dd42e40-114b-103f-a209-d94a5b775cd0
+member: secAuthority=Default
+member: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDae
+ mons,secAuthority=Default
+member: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+member: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+
+dn: cn=remote-acl-users,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjIxMDYwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni42MjEwNjBa
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: remote-acl-users
+secUUID: 4fa0528c-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=remote-acl-users,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a20a-d94a5b775cd0
+
+dn: cn=SecurityMaster,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjI1MDEwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni42NjQ0ODha
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: sec_master
+cn: SecurityMaster
+sn: sec_master
+userPassword: {SSHA512}o0GiDNz7k1IjrgfyGWd0jqL17SowIdRClhH+Vo1WbZWuJotoA7+Lx3D
+ WhS8IVNOn2RKm3i0yfN1URdhNaj8CX4dfcNx3iUsv6IB90wtDbVKRLpp33HT9+SqMAJpVhTD1Hsm
+ OnLZUTM/v90dJFwTZBE1FDxul9sQYsz+uaa0hz9k=
+uid: sec_master
+description: DO NOT MODIFY: Access Manager identity
+ibm-entryuuid: 0dd42e40-114b-103f-a20b-d94a5b775cd0
+
+dn: principalName=sec_master,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjI4OTcwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni42NzgxNjla
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+principalName: sec_master
+secUUID: 4fa136c0-7cff-11ef-b03d-865ee98d9c4f
+secDomainId: Default%sec_master
+secDN: cn=SecurityMaster,secAuthority=Default
+secAcctValid: TRUE
+secPwdLastChanged: 20240927183546.0Z
+secPwdValid: TRUE
+secHasPolicy: TRUE
+ibm-entryuuid: 0dd42e40-114b-103f-a20c-d94a5b775cd0
+
+dn: cn=Policies,principalName=sec_master,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjczNzAxWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni42NzM3MDFa
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: 0dd42e40-114b-103f-a20d-d94a5b775cd0
+
+dn: cn=Policy,cn=Policies,principalName=sec_master,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNjc1NTcxWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MDAyMzla
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+passwordMaxAge: 0
+secAcctExpires: 39750123000000.0Z
+secAcctLife: 0
+secTODAccess: 0:0:0:0
+secMaxWebSessions: -4
+ibm-entryuuid: 0dd42e40-114b-103f-a20e-d94a5b775cd0
+
+dn: cn=ivmgrd-servers,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzA1ODQxWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni45NjI4NDZa
+objectclass: top
+objectclass: groupOfNames
+cn: ivmgrd-servers
+description: DO NOT MODIFY: Controls Access Manager daemons
+ibm-entryuuid: 0dd42e40-114b-103f-a20f-d94a5b775cd0
+member: secAuthority=Default
+member: cn=SecurityMaster,secAuthority=Default
+member: cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
+
+dn: cn=ivmgrd-servers,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzA3NjQ2Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MDc2NDZa
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: ivmgrd-servers
+secUUID: 4fad8b14-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=ivmgrd-servers,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a210-d94a5b775cd0
+
+dn: cn=iv-admin,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzExODcwWj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwMjI5NDguNzM5NDc2Wg==
+objectclass: top
+objectclass: groupOfNames
+cn: iv-admin
+description: DO NOT MODIFY: Controls Access Manager Administrators
+ibm-entryuuid: 0dd42e40-114b-103f-a211-d94a5b775cd0
+member: secAuthority=Default
+member: cn=SecurityMaster,secAuthority=Default
+member: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDae
+ mons,secAuthority=Default
+member: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+member: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+
+dn: cn=iv-admin,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzEzNjM1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MTM2MzVa
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: iv-admin
+secUUID: 4fae78da-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=iv-admin,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a212-d94a5b775cd0
+
+dn: cn=secmgrd-servers,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzE3ODAwWj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwMjI5NDguMzgzMjczWg==
+objectclass: top
+objectclass: groupOfNames
+cn: secmgrd-servers
+description: DO NOT MODIFY: Access Manager identity
+ibm-entryuuid: 0dd42e40-114b-103f-a213-d94a5b775cd0
+member: secAuthority=Default
+member: cn=SecurityMaster,secAuthority=Default
+member: cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
+member: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDae
+ mons,secAuthority=Default
+member: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+member: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+
+dn: cn=secmgrd-servers,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzE5NTA1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MTk1MDVa
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: secmgrd-servers
+secUUID: 4faf60a6-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=secmgrd-servers,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a214-d94a5b775cd0
+
+dn: cn=webseal-servers,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzIzNTgyWj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwMjI5NDguMzgxOTc5Wg==
+objectclass: top
+objectclass: groupOfNames
+cn: webseal-servers
+description: DO NOT MODIFY: Access Manager identity
+ibm-entryuuid: 0dd42e40-114b-103f-a215-d94a5b775cd0
+member: secAuthority=Default
+member: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Security
+ Daemons,secAuthority=Default
+member: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDae
+ mons,secAuthority=Default
+member: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+member: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Sec
+ urityDaemons,secAuthority=Default
+
+dn: cn=webseal-servers,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzI1MjU4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MjUyNTha
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: webseal-servers
+secUUID: 4fb04282-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=webseal-servers,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a216-d94a5b775cd0
+
+dn: cn=webseal-mpa-servers,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzI5MDk2Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MzM0Njda
+objectclass: top
+objectclass: groupOfNames
+cn: webseal-mpa-servers
+description: DO NOT MODIFY: Controls Multiplexing Proxy Agent servers
+ibm-entryuuid: 0dd42e40-114b-103f-a217-d94a5b775cd0
+member: secAuthority=Default
+
+dn: cn=webseal-mpa-servers,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuNzMwODI5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni43MzA4Mjla
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: webseal-mpa-servers
+secUUID: 4fb1181a-7cff-11ef-b03d-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=webseal-mpa-servers,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 0dd42e40-114b-103f-a218-d94a5b775cd0
+
+dn: cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuOTI5NjM0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni45Mzc2Mjda
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: ivmgrd/master
+sn: ivmgrd/master
+userPassword: {SSHA512}J0j8cad/1PNyP/fouLse1SWLG18ffhz/Eayl1f8ODfZqAotqC1cC4sC
+ z6wS3OvD71NrxkabTsg8ZV5P6vDt9XIbokXn7h7jg304Uy928GjBKEk/5hzRs2VM1i0WelrbW8jd
+ duQIS+wuB2qGudrjRes/VG/JRFK/kedKUzwMXcgU=
+uid: ivmgrd/master
+description: DO NOT MODIFY: Access Manager identity
+ibm-entryuuid: 0dd42e40-114b-103f-a219-d94a5b775cd0
+
+dn: principalName=ivmgrd/master,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAEGMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuOTMzNjQzWj
+ CEAAAAWAoBADCEAAAATwQNbW9kaWZpZXJzTmFtZTGEAAAAOgQ4Q049SVZNR1JEL01BU1RFUixDTj
+ 1TRUNVUklUWURBRU1PTlMsU0VDQVVUSE9SSVRZPURFRkFVTFQwhAAAADgKAQAwhAAAAC8ED21vZG
+ lmeVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDcuNjAzODE0Wg==
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+principalName: ivmgrd/master
+secUUID: 4fcb737c-7cff-11ef-9f68-865ee98d9c4f
+secDomainId: Default%ivmgrd/master
+secDN: cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
+secAcctValid: TRUE
+secPwdLastChanged: 20240927183546.0Z
+secPwdValid: TRUE
+secHasPolicy: TRUE
+secCertDN: CN=ivmgrd/master,O=Policy Director,C=US
+secCertSerialNumber: 10000001
+ibm-entryuuid: 0dd42e40-114b-103f-a21a-d94a5b775cd0
+
+dn: cn=Policies,principalName=ivmgrd/master,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuOTQ2NzU3Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni45NDY3NTda
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: 0dd42e40-114b-103f-a21b-d94a5b775cd0
+
+dn: cn=Policy,cn=Policies,principalName=ivmgrd/master,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjcxODM1NDYuOTQ4NTI0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyNzE4MzU0Ni45NjAzNTda
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+passwordMaxAge: 0
+secAcctExpires: 39750123000000.0Z
+secAcctLife: 0
+secTODAccess: 0:0:0:0
+secMaxWebSessions: -4
+ibm-entryuuid: 0dd42e40-114b-103f-a21c-d94a5b775cd0
+
+dn: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjAxODE0NFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjA0OTI3M1o=
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8
+sn: isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8
+userPassword: {SSHA512}1PBfqDQ0n4mF7lewsP9QyNxnQGg0fZCtC1W1LyYrkI6y/YIYmHZtuHH
+ JtWicubnk3aAG8n8WllbE9IbcRVZ2bwGSG9VaUi9Tkh3eNbOL0v+2HyHomPOyoJpaGl7hwBpTYmd
+ QixjhSqVgHw85PeC3o/7A95E6CgHiTOLSS6mzsNo=
+uid: isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8
+description: Security Access Manager WebSEAL-isvarp-external Server
+ibm-entryuuid: 3eb46340-114b-103f-a21d-d94a5b775cd0
+
+dn: principalName=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjAyMzAxN1owhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjA4NTQxOVo=
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+secPwdValid: TRUE
+principalName: isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8
+secUUID: 8024b114-7cff-11ef-9f60-865ee98d9c4f
+secDomainId: Default%isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8
+secDN: cn=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityD
+ aemons,secAuthority=Default
+secPwdLastChanged: 20240927183708.0Z
+secAcctValid: TRUE
+secHasPolicy: TRUE
+secCertDN: CN=isvarp-external-webseald-isvaconfig-rp-65858975d8-n75w8,OU=Defau
+ lt,O=Access Manager,C=US
+secCertSerialNumber: 10001001
+ibm-entryuuid: 3eb46340-114b-103f-a21e-d94a5b775cd0
+
+dn: cn=Policies,principalName=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjAzNzg2M1owhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjAzNzg2M1o=
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: 3eb46340-114b-103f-a21f-d94a5b775cd0
+
+dn: cn=Policy,cn=Policies,principalName=isvarp-external-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjAzOTY5NVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjA0Nzk1N1o=
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+secAcctExpires: 39750123000000.0Z
+passwordMaxAge: 0
+secTODAccess: 0:0:0:0
+ibm-entryuuid: 3eb46340-114b-103f-a220-d94a5b775cd0
+
+dn: cn=su-admins,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIwNjMyNVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIyMjQ5OFo=
+objectclass: top
+objectclass: groupOfNames
+cn: su-admins
+description: USE WITH CAUTION - Members of this group can impersonate other us
+ ers via the Switch User operation.
+ibm-entryuuid: 3eb46340-114b-103f-a221-d94a5b775cd0
+member: secAuthority=Default
+
+dn: cn=su-admins,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIwODQ5M1owhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIwODQ5M1o=
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: su-admins
+secUUID: 804183f2-7cff-11ef-9f60-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=su-admins,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 3eb46340-114b-103f-a222-d94a5b775cd0
+
+dn: cn=su-excluded,cn=SecurityGroups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIyOTg0MVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjI0NTc3MVo=
+objectclass: top
+objectclass: groupOfNames
+cn: su-excluded
+description: Members of this group cannot be impersonated using the Switch Use
+ r operation.
+ibm-entryuuid: 3eb46340-114b-103f-a223-d94a5b775cd0
+member: secAuthority=Default
+
+dn: cn=su-excluded,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIzMTg1NVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTgzNzA4LjIzMTg1NVo=
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: su-excluded
+secUUID: 80451b5c-7cff-11ef-9f60-865ee98d9c4f
+secHasPolicy: FALSE
+secDN: cn=su-excluded,cn=SecurityGroups,secAuthority=Default
+ibm-entryuuid: 3eb46340-114b-103f-a224-d94a5b775cd0
+
+dn: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI1MDk1MFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI4MTkyOFo=
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8
+sn: isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8
+userPassword: {SSHA512}JlKeIN4l8eC5+zM5l1jUMl7gktfrDI1g5KXw30k2wZgXmyUgKNLCJYl
+ KD3P7x8yp3xLOV7SuZYB48rqeIwksHviiGn8ykUfYBCrB7uuuha5Ulb8Pe+hmG54M9yB2lzGwn4S
+ ZflJi+RLwbppUZTXCzr9phJibVb55DZxAevnAk6c=
+uid: isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8
+description: Security Access Manager WebSEAL-isvarp-internal Server
+ibm-entryuuid: f1d18c40-114c-103f-a225-d94a5b775cd0
+
+dn: principalName=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI1NTQwOFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjMxNzQzNVo=
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+secPwdValid: TRUE
+principalName: isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8
+secUUID: 33656ac4-7d01-11ef-a8e2-865ee98d9c4f
+secDomainId: Default%isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8
+secDN: cn=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityD
+ aemons,secAuthority=Default
+secPwdLastChanged: 20240927184918.0Z
+secAcctValid: TRUE
+secHasPolicy: TRUE
+secCertDN: CN=isvarp-internal-webseald-isvaconfig-rp-65858975d8-n75w8,OU=Defau
+ lt,O=Access Manager,C=US
+secCertSerialNumber: 10001002
+ibm-entryuuid: f1d18c40-114c-103f-a226-d94a5b775cd0
+
+dn: cn=Policies,principalName=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI3MDQ3MFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI3MDQ3MFo=
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: f1d18c40-114c-103f-a227-d94a5b775cd0
+
+dn: cn=Policy,cn=Policies,principalName=isvarp-internal-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI3MjM5NFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg0OTE4LjI4MDY1M1o=
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+secAcctExpires: 39750123000000.0Z
+passwordMaxAge: 0
+secTODAccess: 0:0:0:0
+ibm-entryuuid: f1d18c40-114c-103f-a228-d94a5b775cd0
+
+dn: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjAyNTUwOVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjA1NTg1Mlo=
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8
+sn: isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8
+userPassword: {SSHA512}qYOt5sj5lnOAgDnkeH24zGZxzGncsto6KIY/gOMWU9ulYcuEnHe9KMn
+ DAtMlBIKnpzr6vynEzw1RCcXlSZRvbmIIfR0Rfbuit3ObGpr4TkMEkIGSyFpXHt2mzU/cUJTpN/R
+ SEsDV4CdidEHWXw3E+2+TuTrJVA9i6CYujMssD2U=
+uid: isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8
+description: Security Access Manager WebSEAL-isvarp-users Server
+ibm-entryuuid: 1c2349c0-114d-103f-a229-d94a5b775cd0
+
+dn: principalName=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjAyOTk5MlowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjA4MzI2NFo=
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+secPwdValid: TRUE
+principalName: isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8
+secUUID: 5d94be8a-7d01-11ef-a8e2-865ee98d9c4f
+secDomainId: Default%isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8
+secDN: cn=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=SecurityDaem
+ ons,secAuthority=Default
+secPwdLastChanged: 20240927185029.0Z
+secAcctValid: TRUE
+secHasPolicy: TRUE
+secCertDN: CN=isvarp-users-webseald-isvaconfig-rp-65858975d8-n75w8,OU=Default,
+ O=Access Manager,C=US
+secCertSerialNumber: 10001003
+ibm-entryuuid: 1c2349c0-114d-103f-a22a-d94a5b775cd0
+
+dn: cn=Policies,principalName=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjA0NDU4NFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjA0NDU4NFo=
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: 1c2349c0-114d-103f-a22b-d94a5b775cd0
+
+dn: cn=Policy,cn=Policies,principalName=isvarp-users-webseald/isvaconfig-rp-65858975d8-n75w8,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjA0NjI3M1owhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQwOTI3MTg1MDI5LjA1NDYyMFo=
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+secAcctExpires: 39750123000000.0Z
+passwordMaxAge: 0
+secTODAccess: 0:0:0:0
+ibm-entryuuid: 1c2349c0-114d-103f-a22c-d94a5b775cd0
+
+dn: dc=pvc,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MjkxMDM5MDIuMDE3NTczWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkyOTEwMzkwMi4wMTc1NzNa
+dc: pvc
+objectclass: domain
+objectclass: top
+ibm-entryuuid: c957a840-129a-103f-b625-99e12d299e29
+
+dn: dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MzAwNTM4MDAuNTg2MTY1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wNjAyMTNa
+dc: pvb
+objectclass: domain
+objectclass: top
+objectclass: ibm-replicationContext
+ibm-entryuuid: e5f6ed40-1339-103f-84ce-f847a110ce51
+
+dn: cn=Crisjohn,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MzAwNjE1NDIuOTUxNzEwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MDkzMDA2MjAyNC4zMjM5Nzda
+mobile: 9347872491
+pvbUserKCPwd: k9gHVUAiqAGbIcOTZLTO+CTbsYzCrRHF49L5ifmi9ps=
+sn: John
+pvbUserAction: true
+pvbUserStatus: {"reason":"disable_user_account"}
+mail: crisjohn@pvb.com
+pvbUserCIF: CRIS-0001
+telephoneNumber: 9347872491
+givenName: Crisjohn
+objectclass: pvbuser
+objectclass: top
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+uid: Crisjohn
+pvbUserUUID: Crisjohn
+cn: Crisjohn
+displayName: Crisjohn
+userPassword: {SSHA512}21AwXul3FY2+wW0Y9KhUunS06XOmQcCuuySRPhw4Tj7vhMnSvkSO7pi
+ lhAixniy45GIc87ih5QVmUuJWP8P01N5/Ms6VHR0K8AReWX0YNplHNPfPomwomlnqlnFW1TylXE/
+ w/ZjFrWl6APjELxWfWGDSAmQZsFGOlj2zu/eDKqA=
+pvbUserCreatedAt: 19001012045223
+preferredLanguage: en
+ibm-entryuuid: 2a38bc40-133f-103f-84cf-f847a110ce51
+
+dn: cn=Bobbrad,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MzAwNjE5MjcuODEwNTYwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNzA0MzEyOC43Mjk2Mjda
+mobile: 9749743240
+sn: Brad
+pvbUserAction: true
+ou: customers
+pvbUserStatus: {"reason":"disabled_account_locked"}
+mail: bobbrad@pvb.com
+pvbUserCIF: BOBB-0002
+telephoneNumber: 9749743240
+givenName: Bobbrad
+preferredLanguage: en
+objectclass: pvbuser
+objectclass: top
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+uid: Bobbrad
+pvbUserUUID: Bobbrad
+displayName: Bobbrad
+cn: Bobbrad
+pvbUserCreatedAt: 19001212104234
+userPassword: {SSHA512}qk/tmQIdhffDn4sge3sig636XzEw+j9tFQT4HWDNYjTgn8iIIePYdgy
+ 7wb9EVvWAQt3VaZgV6OZ/j6++AHOaQAHiVZcwGSEyrhyY5bYU4VPcNil41AEHVOWrlX/lWZOEAZH
+ gV1tC0thsQyjilqQz+ZWCh3jqN7r2qyDPhyEDJKc=
+pvbUserKCPwd: k9gHVUAiqAGbIcOTZLTO+CTbsYzCrRHF49L5ifmi9ps=
+ibm-entryuuid: b05502c0-133f-103f-84d0-f847a110ce51
+IBM-PWDINDIVIDUALPOLICYDN: cn=noPwdPolicy
+aclpropagate: TRUE
+aclentry: access-id:CN=BOBBRAD,DC=PVB,DC=VN:object:ad:normal:rwsc:sensitive:rw
+ sc:critical:rwsc:system:rsc:restricted:rwsc
+
+dn: cn=ciamtest1,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MzAxMTQzMTguMjkwMzgwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNzAzMTY0OS41MTE4NTFa
+mobile: 9743843874
+sn: test1
+pvbUserCIF: CIAM-TEST-1
+telephoneNumber: 9743843874
+preferredLanguage: en
+objectclass: pvbuser
+objectclass: top
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+uid: ciamtest1
+pvbUserUUID: ciamtest1
+cn: ciamtest1
+pvbUserCreatedAt: 19990712030540
+pvbUserKCPwd: k9gHVUAiqAGbIcOTZLTO+CTbsYzCrRHF49L5ifmi9ps=
+userPassword: {SSHA512}mRZbRKi4ST89kaEKWJsOszdwY3LiFacHeNHWJAlfl1unBxXp7YC/lwP
+ jGVFiYyHbG4lH9iUk3QZAx4RtfGu0pTol/RavGWiGudD7pYU3OtVHqGbWs9f+4dl4SYuC66+ry78
+ Y6Tpfl8yeDDovf1X2Hcv6Nzt4VmyUGGOrJGN8Mgs=
+pvbUserAction: {"reason":"disabled_account_locked"}
+pvbUserStatus: true
+ibm-entryuuid: ee1c5040-136c-103f-84d1-f847a110ce51
+PWDHISTORY: 20241004073912.987509Z#2.5.4.35#181#{SSHA512}lZYwhX+WiIR3eJq/oZdz4
+ OUgS9uehikV+FlGI7Za+c0U9ocDzA6qUGBSSwef8lVOroWjKUwlnMMiwIOG9Ru6++Q0MrLcr+fSB
+ yTJ0axaX6FL2qnPMn9sAgvs1/GBqK3OJ9htRnkDZbDIWpJggsdpwUID2KXpUXLK86DSLYH62Iw=
+PWDHISTORY: 20241004064204.416387Z#2.5.4.35#181#{SSHA512}ZHI2U9ZLnTkg8gdvrTgQf
+ CgWTZG7QcUzitkndeiuRcpdKXaC0APJZkmQpKEIc6d7dfFLTUztnHLZDVZVGYW9PG+urA431fnYx
+ h7yjVgPwsnDOBWHP2wmnG0hsGu7EBAfZ3HZEpit3xCyqZISIQKXro8DI9L94iWJ2MBmIwttP58=
+PWDHISTORY: 20241004061458.280977Z#2.5.4.35#181#{SSHA512}LkN7iVLvlVldpTJu8rqIw
+ 3I2QQp/PkLYa6ZGvzfD0Ys/zDnQ8596oQdZh+7o0UNfKJysplsQSLxMWtS4dsBL/lVyBkhbkEqCP
+ ey04kk1iguQG8ZTI5cpVGwiKrz/YXPfocKMZ21eobzCC3aNm8hXcCBmLMlzdL6vnYCLUiFyhj0=
+PWDHISTORY: 20241004055649.059340Z#2.5.4.35#181#{SSHA512}CGhxFnJYw2VttfErBYQ/n
+ yKA1UqwAsxEy45mTS6+CL5b2L8hGX7TpUbvBLxPFT/Ttlhom5IoPyM3mflBu+00yBjztDxnfBYZL
+ VhO5hlbrRCuhfvxW98R7G/Ibx+YF7wOHgnlqG8IjtLrpfeIMgLXMXbYeUDvNboRo8XkgsuH+wA=
+PWDRESET: true
+PWDCHANGEDTIME: 20241004073912.987081Z
+
+dn: cn=ciamtest2,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDA5MzAxMTQ1MjYuNzI3NjQyWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNDA3NTIxMy40MTEzMzZa
+mobile: 9768426428
+sn: test2
+pvbUserAction: false
+ou: customers
+mail: ciamtest2@pvb.com
+pvbUserCIF: CIAM-TEST-2
+telephoneNumber: 9768426428
+givenName: ciamtest2
+preferredLanguage: en
+objectclass: pvbuser
+objectclass: top
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+uid: ciamtest2
+pvbUserUUID: ciamtest2
+cn: ciamtest2
+displayName: ciamtest2
+pvbUserCreatedAt: 20000101023434
+pvbUserKCPwd: k9gHVUAiqAGbIcOTZLTO+CTbsYzCrRHF49L5ifmi9ps=
+pvbUserStatus: false
+userPassword: {SSHA512}E23nDGrtp2U2i7THl/ZNFqZrTAPYdONyxyZAYiCUdMcbHTwy83QaQzx
+ FG1AmSeIuhPewRvz8GH8mgbglnrb4oXqmV7YvFkwEpMUdOKTTla3l5BHq/a+WVnJFeseGxi4Gkm8
+ ISM340rgx5cVJq4m1Cm/dzHWddl2WI/BEPOkHHtU=
+ibm-entryuuid: 3a679040-136d-103f-84d2-f847a110ce51
+PWDHISTORY: 20241004064344.753449Z#2.5.4.35#181#{SSHA512}B3v5TdZmeA4QgwZ6/TRCj
+ sDCkTpsvOE91MuLxhdNK2y0SJqUhZPh+OIhGU/ghWVQdqYcD9yE4v3BUHTQMOqponsLAA1G0AlBN
+ 9VTCPwoERhQnYQSCCVvUjjrilSCNcfplhvcNqzUigGd/4RUN6gD/oNh/4wrhZ7q0fJFT00d+J4=
+PWDHISTORY: 20241004061521.959098Z#2.5.4.35#181#{SSHA512}uONAkbgiwrBbtiKrEg3PE
+ i6JDRhtha8F5dwWIZ8EKkuKROHTLYeoYaVoZrI9RPIqjcZRbX3+w6NQGXZxLb9Ydo8+3aawkPBA0
+ iwiSpn7ZNioq9ezjcIPLhzq+5fA4Niz4xpJPkjz53f/hlTVoEDvAE+ggIuY4nniGUW5URyg870=
+PWDRESET: true
+PWDCHANGEDTIME: 20241004064344.753006Z
+
+dn: cn=adminGroup,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA0MDQ0NzQ1LjkyMTAyNlowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA0MDQ1MDU1LjYyMjMyMVo=
+objectclass: top
+objectclass: groupOfNames
+cn: adminGroup
+description: SCIM Admin Group
+ibm-entryuuid: 8a896fc0-1657-103f-aa43-9b12d1d0ebf5
+member: secAuthority=Default
+member: cn=scimadmin,secAuthority=Default
+
+dn: cn=adminGroup,cn=Groups,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA0MDQ0NzQ1LjkzOTMyN1owhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA0MDQ0NzQ1LjkzOTMyN1o=
+objectclass: secGroup
+objectclass: top
+secAuthority: Default
+cn: adminGroup
+secUUID: cc837520-820b-11ef-8d62-56db79395d94
+secHasPolicy: FALSE
+secDN: cn=adminGroup,secAuthority=Default
+ibm-entryuuid: 8a896fc0-1657-103f-aa44-9b12d1d0ebf5
+
+dn: cn=scimadmin,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA0MDQ0OTU5Ljk5NDY2MVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA0MTE1MTA5LjM3MzE4M1o=
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: scim
+cn: scimadmin
+sn: admin
+uid: scimadmin
+userPassword: {SSHA512}Zx/e7YIUJ0/Cy5EmqpCGupz1CsYzReyY35UXsPwHcOUUW1dBGX62t5v
+ 77GWRjUMrQYetnxTFyksUWMxw3tLPLt4jemDQewbEof+RirR6kazbvNX0gImKj9F91ts0Pn3GLJ0
+ fO4kafxypsMfuQeXOcAMTBHI0/2aef8DP5feMV7M=
+ibm-entryuuid: da6836c0-1657-103f-aa45-9b12d1d0ebf5
+PWDRESET: true
+
+dn: principalName=scimadmin,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA0MDQ1MDAwLjAwNzAwMVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA0MTE1MTA5LjM4OTU3OVo=
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+principalName: scimadmin
+secUUID: 1c6d687a-820c-11ef-8d62-56db79395d94
+secHasPolicy: FALSE
+secDomainId: Default%scimadmin
+secDN: cn=scimadmin,secAuthority=Default
+secAcctValid: TRUE
+secPwdLastChanged: 20241004115109.0Z
+secPwdValid: TRUE
+ibm-entryuuid: db00cd40-1657-103f-aa46-9b12d1d0ebf5
+
+dn: ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDcwMzU0MjMuNzk0MjIzWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNzAzNTQyMy43OTQyMjNa
+ou: customers
+objectclass: organizationalunit
+objectclass: top
+description: Store PVcomBank Customer Data
+ibm-entryuuid: 953c42c0-18ab-103f-b69c-fe9d5dbae2a6
+
+dn: ou=admins,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDcwMzU1MjMuMDQxMDc1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNzAzNTUyMy4wNDEwNzVa
+ou: customers
+ou: admins
+description: Store PVcomBank Administrator Accounts
+objectclass: organizationalunit
+objectclass: top
+ibm-entryuuid: b8ff88c0-18ab-103f-b69d-fe9d5dbae2a6
+
+dn: ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDcwMzU3MDUuMTEzODUwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNzAzNTcwNS4xMTM4NTBa
+ou: retail
+objectclass: organizationalunit
+objectclass: top
+description: Store Retail Customer Data
+ibm-entryuuid: f5cb7fc0-18ab-103f-b69e-fe9d5dbae2a6
+
+dn: ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDcwMzU4MTguNzY0OTc5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODExNTY1My4yMDA2OTNa
+ou: users
+objectclass: organizationalunit
+objectclass: top
+description: Store Customer data
+ibm-entryuuid: 214e6a40-18ac-103f-b69f-fe9d5dbae2a6
+aclpropagate: TRUE
+aclentry: access-id:CN=THIS:at.userPassword:w
+aclentry: access-id:UID=SMARTFORMADM,OU=USERS,OU=ADMINS,DC=PVB,DC=VN:object:a:
+ normal:rwsc:sensitive:rwsc:critical:rwsc:at.userPassword:rwsc
+
+dn: ou=groups,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDcwMzU5MTkuMzY3MTczWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwNzAzNTkxOS4zNjcxNzNa
+ou: groups
+objectclass: organizationalunit
+objectclass: top
+ibm-entryuuid: 45aa46c0-18ac-103f-b6a0-fe9d5dbae2a6
+
+dn: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjYwMDMzNFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjY1MjE1Mlo=
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+sn: isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+userPassword: {SSHA512}S9FuGyZnQbGCj7eMKIWgxMMJ/jE2bs5mnCKxxVb+SaOSkjW3A6GDXPm
+ z6rHzIkTpxFoK2FmM483WjZZfGZWGMk0TLb2EmwcaJuerO4dj6kpUJPdJmLGHv4caDt+wkEsAyNh
+ V+9PuI67k13QSE1zn4A20B/BzuGYW+g5Gs3z7UA4=
+uid: isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+description: Security Access Manager WebSEAL-isvarp-external-mtls Server
+ibm-entryuuid: d47c9940-1968-103f-9952-b257d04cf8fb
+
+dn: principalName=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjYwNDcyMFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjY3Nzg2OFo=
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+secPwdValid: TRUE
+principalName: isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+secUUID: 1645ccc6-851d-11ef-9f2b-7ebc613eb56d
+secDomainId: Default%isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q
+ 5xh
+secDN: cn=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Secu
+ rityDaemons,secAuthority=Default
+secPwdLastChanged: 20241008022904.0Z
+secAcctValid: TRUE
+secHasPolicy: TRUE
+secCertDN: CN=isvarp-external-mtls-webseald-isvaconfig-rp-6b67764c76-6q5xh,OU=
+ Default,O=Access Manager,C=US
+secCertSerialNumber: 10001006
+ibm-entryuuid: d47c9940-1968-103f-9953-b257d04cf8fb
+
+dn: cn=Policies,principalName=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjYyODc2NVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjYyODc2NVo=
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: d47c9940-1968-103f-9954-b257d04cf8fb
+
+dn: cn=Policy,cn=Policies,principalName=isvarp-external-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjYzMDY5OVowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTA0LjY0NjQ0NVo=
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+secAcctExpires: 39750123000000.0Z
+passwordMaxAge: 0
+secTODAccess: 0:0:0:0
+ibm-entryuuid: d47c9940-1968-103f-9955-b257d04cf8fb
+
+dn: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=SecurityDaemons,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjM2OTU2NFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjQxOTk5NVo=
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: ePerson
+cn: isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+sn: isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+userPassword: {SSHA512}pcfFGkXhNWcwVZuyTBcRgOLufk7zP+4ZooPJ7HbczmXeOkyuezd4bxl
+ 8Rt0P0mP/HJ5Cv6LiUBFrtsHayFXs0MPt6Rg3flZQjwdxf7rocIjE0k+yWfEEoLbPAgjxfDHs+Pc
+ AL5XCPjZPjiUM0q/tfWwew5DOwkResr71ij/cwbE=
+uid: isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+description: Security Access Manager WebSEAL-isvarp-internal-mtls Server
+ibm-entryuuid: eeb67740-1968-103f-9956-b257d04cf8fb
+
+dn: principalName=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjM3NDg1MFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjQ1NDA3Mlo=
+objectclass: secUser
+objectclass: eUser
+objectclass: cimManagedElement
+objectclass: top
+secAuthority: Default
+secLoginType: Default:LDAP
+secPwdValid: TRUE
+principalName: isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh
+secUUID: 305c7df8-851d-11ef-9f2b-7ebc613eb56d
+secDomainId: Default%isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q
+ 5xh
+secDN: cn=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Secu
+ rityDaemons,secAuthority=Default
+secPwdLastChanged: 20241008022948.0Z
+secAcctValid: TRUE
+secHasPolicy: TRUE
+secCertDN: CN=isvarp-internal-mtls-webseald-isvaconfig-rp-6b67764c76-6q5xh,OU=
+ Default,O=Access Manager,C=US
+secCertSerialNumber: 10001007
+ibm-entryuuid: eeb67740-1968-103f-9957-b257d04cf8fb
+
+dn: cn=Policies,principalName=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjM5NzkwNFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjM5NzkwNFo=
+objectclass: container
+objectclass: top
+cn: Policies
+ibm-entryuuid: eeb67740-1968-103f-9958-b257d04cf8fb
+
+dn: cn=Policy,cn=Policies,principalName=isvarp-internal-mtls-webseald/isvaconfig-rp-6b67764c76-6q5xh,cn=Users,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAAE3MIQAAABXCgEAMIQAAABOBAxjcmVhdG9yc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQV
+ NURVIsQ049U0VDVVJJVFlEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAA
+ AvBA9jcmVhdGVUaW1lc3RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjQwMDAzOFowhAAAAFgKAQ
+ AwhAAAAE8EDW1vZGlmaWVyc05hbWUxhAAAADoEOENOPUlWTUdSRC9NQVNURVIsQ049U0VDVVJJVF
+ lEQUVNT05TLFNFQ0FVVEhPUklUWT1ERUZBVUxUMIQAAAA4CgEAMIQAAAAvBA9tb2RpZnlUaW1lc3
+ RhbXAxhAAAABgEFjIwMjQxMDA4MDIyOTQ4LjQxNDU2M1o=
+objectclass: secPolicy
+objectclass: ePasswordPolicy
+objectclass: top
+cn: Policy
+secAcctExpires: 39750123000000.0Z
+passwordMaxAge: 0
+secTODAccess: 0:0:0:0
+ibm-entryuuid: eeb67740-1968-103f-9959-b257d04cf8fb
+
+dn: pvbUserUUID=392ec909-a8e7-4693-96fa-ba61383e67b9,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwODE2MDkuNzg0NzEwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODExMjUwOS4xMTg1Nzla
+sn: Kumar
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 16832683
+givenName: Kishore
+uid: 16832683
+pvbUserUUID: 392ec909-a8e7-4693-96fa-ba61383e67b9
+cn: Kishore Kumar
+userPassword: {SSHA512}edAdgEhYmG/1+wg5hjZY9zo7qX3N88Es3+XQQmw/fZx3UmgrTYD7UT+
+ RJQaIXBMIlpWhBLoaPZSqZRCOCmub9MIhGOVjnj5HM4iXNbMqlsfarwte4MevIgX25OF+6wsDHdh
+ TLTaGSL8fAzdZOMfttXfzpfA5X7Vv3c0HtUyIaZM=
+mail: mail@hotmail.com
+ibm-entryuuid: 51276bc0-1999-103f-995a-b257d04cf8fb
+
+dn: pvbUserUUID=536ae204-e3b3-4236-87ac-8ce4977a5274,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwODE3MDkuNTk1OTkyWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODA4MTcwOS41OTU5OTJa
+sn: Quoc Tuan
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 16832684
+mail: 16832684@hotmail.com
+givenName: Nguyen
+uid: 16832684
+pvbUserUUID: 536ae204-e3b3-4236-87ac-8ce4977a5274
+cn: Nguyen Quoc Tuan
+userPassword: {SSHA512}cKZZ1VEBDN0fNyJOjpyj4nzhzqyGq+ZWCqd8fOjutM5Q+Dw4JZlnKxy
+ elxNjGICBUWokqV1fd0UnCdViVTTb4li3eJc05lbBYxrSRY/FDamLuXyzeYSuMa7w+PctL2uMi4y
+ pol+wKBUcs3+s/XWnYXOgiNMiNJtyspg38+NDUVY=
+ibm-entryuuid: 74eab1c0-1999-103f-995b-b257d04cf8fb
+
+dn: pvbUserUUID=1e1ded31-f090-4d6a-881c-e83749cacdbb,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwODI4MjEuNDc4NTE3Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODA4MjgyMS40Nzg1MTda
+sn: Quoc Tuan
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 11911625
+mail: 11911625@hotmail.com
+givenName: Nguyen
+uid: 11911625
+pvbUserUUID: 1e1ded31-f090-4d6a-881c-e83749cacdbb
+cn: Nguyen Quoc Tuan
+userPassword: {SSHA512}EsTgcZtOqqSR8jDle2MXKtGbSkceTMSqXj7uQ3Pw9Q2XVQQyUL4H8vb
+ 2o4HTS8ytv4tSen0YgqmdndVe4SSUBy7AeviP0eWRLa7or9qMkl0gDpF3YEbGRznxAAYQBm21dRd
+ /ZFZSrZbnxKody1Dah2GKuM6CrVyIkmoT1EzhZvY=
+ibm-entryuuid: 0575c1c0-199b-103f-995c-b257d04cf8fb
+
+dn: uid=karthik,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwODQwNTIuMDMyMzQwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDExMTA1OC45NTc2MzFa
+postalCode: karthik
+sn: karthik
+departmentNumber: Fake Depart
+pvbUserCIF: Karthik
+mail: karthik
+uid: karthik
+objectclass: pvbuser
+objectclass: top
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+pvbUserUUID: karthik
+employeeType: Karthik
+cn: Karthik
+pvbUserStatus: false
+userPassword: {SSHA512}xZY9G3S9xsZXRVsUkaMWM4A9MkkCoi4d0DM4fsmCKRqRfDS4RXQN6gI
+ qLoJ3aJeSlDuTju0yPjaBlZfZwPZE8/qps6ReLNFqkbar0VTr9aNOrmoft4BGsfBIizwfU5/PtxP
+ LNsWAG8aVzoXAU4wqD3BlqkqCDh3z0O0q8vDRu6o=
+ibm-entryuuid: c5174340-199c-103f-995d-b257d04cf8fb
+PWDRESET: true
+PWDCHANGEDTIME: 20241010110444.003776Z
+
+dn: pvbUserUUID=86db5775-05a5-4be3-80a2-fd327263fadd,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwODQzMTQuNjg5NDc0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODA4NTgwNS40OTMwMTRa
+sn: BS
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 19911625
+mail: 19911625@hotmail.com
+givenName: Karthik
+uid: 19911625
+pvbUserUUID: 86db5775-05a5-4be3-80a2-fd327263fadd
+cn: Karthik BS
+userPassword: {SSHA512}mVKnev2r/s7iYerkBTn38UfmU9hY0VplesmlYWNhuQsehnt3DoKuVnV
+ H11pBySArV81WTm5knE5Zpo0BNZFXBcfAWQJe1MUtY8TiPuiJ2RWmoz31ZGDI60ivGeImyd5x7ng
+ KmZomXbNd0HIX8wiTPVMAeSb9D3N3zd65F3xdw5Q=
+ibm-entryuuid: 19babe40-199d-103f-995e-b257d04cf8fb
+PWDFAILURETIME: 20241008091324.652155Z
+PWDRESET: true
+PWDCHANGEDTIME: 20241008085305.24094
+
+dn: pvbUserUUID=3ea7d6e4-4079-4efd-b096-ea36c915f07a,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwODQ0MzIuMjI0NTIxWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODA4NDQzMi4yMjQ1MjFa
+sn: BS
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 19911625
+mail: 19911625@hotmail.com
+givenName: Karthik
+uid: 19911625
+pvbUserUUID: 3ea7d6e4-4079-4efd-b096-ea36c915f07a
+cn: Karthik BS
+userPassword: {SSHA512}GtebdIfMN9m0Pzz151/EvRxCxY6lgbZi8HthzwLMtc13zh0EfibCOir
+ dKLTHWxKz9hPjYsJWhDXKNknVLGb0s4ZozwX0RkZjYh0Idds66wf++BVWJ37RzFVprG0PELAscKC
+ 4DFqhGBYF0eWwkCpJ5mwoBvTwlNxzUizZMMirkBM=
+ibm-entryuuid: 48389940-199d-103f-995f-b257d04cf8fb
+
+dn: pvbUserUUID=debfd143-1546-456d-b4d8-2779f263ce56,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwOTIwMTkuNDAyNDc1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODExNTkxMi40MjEyMjla
+sn: Nguyen
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 19911626
+givenName: Tuan
+uid: 19911626
+pvbUserUUID: debfd143-1546-456d-b4d8-2779f263ce56
+cn: Tuan Nguyen
+mail: mail@hotmail.com
+userPassword: {SSHA512}ARINI+W47BW3Sq5fNYl7qWnaO9pDSgwaDWYdcU2K551mqR9tUkVJbuH
+ 7KU5+pwDTasqR2LqEjapyT/V0W+7V/NB01JIBByNYAYn9yan1ypFUnYzkVxr5rfod7vM0nT3IA8A
+ v5amFoO7hGv8xH+W3rL/2qYQXyd8MCCtHdqC21+c=
+ibm-entryuuid: 47eeccc0-19a2-103f-9960-b257d04cf8fb
+PWDRESET: true
+PWDCHANGEDTIME: 20241008092221.649424Z
+
+dn: pvbUserUUID=24de3b16-de8d-4d28-becb-67741a3a641c,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgwOTI5MDkuNzM0MzYxWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODA5MjkwOS43MzQzNjFa
+sn: Nguyen
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+pvbUserCIF: 19911627
+mail: 19911627@hotmail.com
+givenName: Tuan
+uid: 19911627
+pvbUserUUID: 24de3b16-de8d-4d28-becb-67741a3a641c
+cn: Tuan Nguyen
+userPassword: {SSHA512}3zbMQU1LxPP4KwZAqN3ZSUwIzKJF8rYz9EL4wvcSMf+z7WfhRwMH7+C
+ Jo7O1N2NT10gf5iHkhUlBjNmujbnin0Rb80zQ/CDECsaRmvEqGpadoQbUWkOAXZS6abBzfoYMKbq
+ vMlSboAXEsF+yNq+UBhFfeOmz5HBw3wMBeMHf4BQ=
+ibm-entryuuid: 83d661c0-19a3-103f-9961-b257d04cf8fb
+PWDFAILURETIME: 20241008111221.521024Z
+PWDRESET: true
+
+dn: ou=users,ou=admins,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgxMTM0NTMuOTk2MTM0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODExMzQ1My45OTYxMzRa
+ou: users
+objectclass: organizationalunit
+objectclass: top
+description: Store admin users
+ibm-entryuuid: 14696dc0-19b5-103f-9962-b257d04cf8fb
+
+dn: uid=smartformadm,ou=users,ou=admins,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDgxMTM2NDguODA4MjcwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODExNDc0OC4wMTA0MTla
+displayName: smart form admin
+uid: smartformadm
+objectclass: inetorgperson
+objectclass: top
+objectclass: organizationalperson
+objectclass: person
+description: Smart Form admin ID
+sn: admin
+cn: smartformadmin
+userPassword: {SSHA512}q3lMc26Se3SiJjk7Ry2mD7K/EoANyBSURu/aVAjKTwh92Y0wUgiAv2P
+ w4VijOSgYhoTnof4zCHi3r3At+69+mUoDIS9wLQfO8yFgQM9GG17gMb0tOHb29IABeupDF2K8ItX
+ RUlrKRdW0ma/CYqbXSxOrY1vb8Q526TjLO8u8fp8=
+ibm-entryuuid: 58f50940-19b5-103f-9963-b257d04cf8fb
+IBM-PWDINDIVIDUALPOLICYDN: cn=noPwdPolicy
+PWDCHANGEDTIME: 20241008114146.655691Z
+
+dn: pvbUserUUID=78ae8dfc-0a99-4834-bf0f-ffc4c80b5c68,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAAEnMIQAAABPCgEAMIQAAABGBAxjcmVhdG9yc05hbWUxhAAAADIEMFVJRD1TTUFSVEZPUk
+ 1BRE0sT1U9VVNFUlMsT1U9QURNSU5TLERDPVBWQixEQz1WTjCEAAAAOAoBADCEAAAALwQPY3JlYX
+ RlVGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwODExNDkzOC41MTgyNjNaMIQAAABQCgEAMIQAAABHBA
+ 1tb2RpZmllcnNOYW1lMYQAAAAyBDBVSUQ9U01BUlRGT1JNQURNLE9VPVVTRVJTLE9VPUFETUlOUy
+ xEQz1QVkIsREM9Vk4whAAAADgKAQAwhAAAAC8ED21vZGlmeVRpbWVzdGFtcDGEAAAAGAQWMjAyND
+ EwMDgxMTQ5MzguNTE4MjYzWg==
+sn: Nguyen
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+pvbUserCIF: 19911627
+mail: 19911627@hotmail.com
+givenName: Tuan
+uid: 19911627
+pvbUserUUID: 78ae8dfc-0a99-4834-bf0f-ffc4c80b5c68
+cn: Tuan Nguyen
+userPassword: {SSHA512}tgsCVkNYfeRdyu1FTNYpXvYTKIIiH4Um7pJ77EehVU4uaEFojs0pcTP
+ TB+CXNRhKAoGd0VJ9upLgrRSSKTB5d+kDyul8VKBJ6Gtjc4eLax9VSpIheUWYeitp61SQFigrwiH
+ 5aPKZ7/Pu3WXRj2NH7X4/4wYzwOe6+LjRfDFuVKU=
+ibm-entryuuid: 23e9b640-19b7-103f-9965-b257d04cf8fb
+PWDRESET: true
+
+dn: uid=11911625,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDkwMTMzMjQuMjAxMjM4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwOTAxMzMyNC4yMDEyMzha
+sn: Nguyen
+pvbUserStatus: true
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+pvbUserCIF: 11911625
+mail: 0382068525@hotmail.com
+givenName: Tuan
+uid: 0382068525
+uid: 11911625
+pvbUserUUID: 6b67e773-950d-45ff-987b-fff3ff540db3
+cn: Tuan Nguyen
+pvbUserCreatedAt: 2024283013148.87692Z
+userPassword: {SSHA512}jTtczELrAQl8pAvGyomGBelsUP/PDBoWVO301N+PJU1XfP0UL7LWNcF
+ dotHtwiaWOL3FpQPZYmnn/Tk3/zMkbmbcqLQAbGprV0GBKzMxG+XYXidXpjxLJ5P0FrAMo7MQAp+
+ 0/+FUo2oAlsXUu5hM22zbFsSWrgs5jtjtyqaYfEY=
+ibm-entryuuid: 381acb40-1a2a-103f-94a4-ab1340faac29
+PWDRESET: true
+
+dn: pvbUserUuid=cb6a916c-3036-4312-9783-d467e37f678c,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDkwMzQ4MTguMzMxNjc4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwOTAzNTcyOC4zODU2ODBa
+sn: Nguyen
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+pvbUserCIF: 11911633
+mail: 0382068530@hotmail.com
+givenName: Tuan
+pvbUserUUID: cb6a916c-3036-4312-9783-d467e37f678c
+cn: Tuan Nguyen
+pvbUserCreatedAt: 2024283013148.87692Z
+userPassword: {SSHA512}qMq/bBm6Bwmdblw+J3BWsXuwdFOPl+/ypJd8cfd9FtiktSGd/rtCRBu
+ DP44ZzfRy3lnUMBTiu1Re/n+G9k7f+A5x6G4uMB2Gz1XVbWSNnV4OZX8LioJl+Lz1x0llzmglGyT
+ wWaeplHZHRAhdnKXdWneMfwEo5mbnJdn1Um/K6EE=
+uid: 0382068531
+pvbUserStatus: {'reason':'Dormant Account','disable_time_stamp':'time'}
+ibm-entryuuid: 10812e40-1a3d-103f-94a9-ab1340faac29
+IBM-PWDACCOUNTLOCKED: true
+PWDRESET: true
+
+dn: pvbUserUuid=b9371ab9-f441-4ef1-ad72-62cfb13ebfa2,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDkwNTA4NTEuNDU5NDE1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwOTA1MDg1MS40NTk0MTVa
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+pvbUserUUID: b9371ab9-f441-4ef1-ad72-62cfb13ebfa2
+mail: karthik@hotmail.com
+uid: 19911000
+userPassword: {SSHA512}LSImsbQkIMuBxHUFaC8ienfYOE7/PBLNu8Biy0Pd7dsfRAYXc1OrBZQ
+ ivDQxzXr3veFfug93CdndHThnQE1c5U99nsm/605Wkt0dCM6fdElqprcvb5fiJIQkqRSa0Sm60g/
+ 49yeCvAiE69XOlkfp8xR+TRssYjIBrGrA6D1vP9M=
+pvbUserCIF: 19911627
+sn: BS
+cn: Karthik
+ibm-entryuuid: 513274c0-1a48-103f-94aa-ab1340faac29
+PWDRESET: true
+
+dn: pvbUserUuid=9428c831-d7fd-462b-bc4e-e3e2254047aa,ou=users,ou=retail,ou=customers,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMDkwNjM4MjQuMzQ3MTI2Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAwOTA2MzgyNC4zNDcxMjZa
+objectClass: pvbUser
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: top
+pvbUserUUID: 9428c831-d7fd-462b-bc4e-e3e2254047aa
+mail: karthik@hotmail.com
+uid: 19001900
+userPassword: {SSHA512}N6rRKhUm8nsu/0dyf5lZqSYps48fNazxfZpmvv3ic70vWtozzj5mmbg
+ qq585aLtQcCGIyqzQDWjjbAuZGT8G+L7xAvzOsG/CZ0G7BLEnQi8cIHnyeiYWRTZ57zUhgIGrJ3W
+ pX1BcHmZ8zzXbznyea1FDWci6PnwgDO1sMt8AhLA=
+pvbUserCIF: 19911627
+sn: Tuan
+cn: Vu
+ibm-entryuuid: d3c13140-1a54-103f-94ab-ab1340faac29
+PWDRESET: true
+
+dn: cn=replcred,cn=replication,cn=IBMpolicies
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTAuOTMzNzcxWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MC45MzM3NzFa
+cn: replcred
+objectclass: ibm-replicationcredentials
+objectclass: ibm-replicationcredentialssimple
+objectclass: top
+replicabinddn: cn=replcred
+replicacredentials: {AES256}8R+cbVk2iw0+92RNgoySzg==
+ibm-entryuuid: 1143be40-1b2a-103f-b720-9dd972f1d992
+
+dn: ibm-replicaGroup=default,o=sample
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTAuOTU5NTUzWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MC45NTk1NTNa
+ibm-replicaGroup: default
+objectclass: top
+objectclass: ibm-replicaGroup
+ibm-entryuuid: 1143be40-1b2a-103f-b721-9dd972f1d992
+
+dn: cn=pvcomsds,ibm-replicaGroup=default,o=sample
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTAuOTY2NTI4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MC45NjY1Mjha
+cn: pvcomsds
+ibm-replicaserverid: pvcomsds
+ibm-replicationserverismaster: TRUE
+objectclass: top
+objectclass: ibm-replicasubentry
+ibm-entryuuid: 1143be40-1b2a-103f-b722-9dd972f1d992
+
+dn: cn=pvcomsds2,cn=pvcomsds,ibm-replicaGroup=default,o=sample
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTAuOTk0NjA1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MC45OTQ2MDVa
+ibm-replicaconsumerconnections: 3
+ibm-replicaconsumerid: pvcomsds2
+ibm-replicacredentialsdn: cn=replcred,cn=replication,cn=IBMpolicies
+ibm-replicamethod: 2
+ibm-replicaurl: ldap://isvd-secondary-server:9389
+objectclass: top
+objectclass: ibm-replicationagreement
+cn: pvcomsds2
+ibm-entryuuid: 1143be40-1b2a-103f-b723-9dd972f1d992
+
+dn: cn=pvcomsds2,ibm-replicaGroup=default,o=sample
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDUzODg1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wNTM4ODVa
+cn: pvcomsds2
+ibm-replicaserverid: pvcomsds2
+ibm-replicationserverismaster: TRUE
+objectclass: top
+objectclass: ibm-replicasubentry
+ibm-entryuuid: 11dc54c0-1b2a-103f-b724-9dd972f1d992
+
+dn: cn=pvcomsds,cn=pvcomsds2,ibm-replicaGroup=default,o=sample
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDU2NTk5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wNTY1OTla
+ibm-replicaconsumerconnections: 3
+ibm-replicaconsumerid: pvcomsds
+ibm-replicacredentialsdn: cn=replcred,cn=replication,cn=IBMpolicies
+ibm-replicamethod: 2
+ibm-replicaurl: ldap://isvd-server:9389
+objectclass: top
+objectclass: ibm-replicationagreement
+cn: pvcomsds
+ibm-entryuuid: 11dc54c0-1b2a-103f-b725-9dd972f1d992
+
+dn: ibm-replicaGroup=default,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDYyMjM5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wNjIyMzla
+ibm-replicaGroup: default
+objectclass: top
+objectclass: ibm-replicaGroup
+ibm-entryuuid: 11dc54c0-1b2a-103f-b726-9dd972f1d992
+
+dn: cn=pvcomsds,ibm-replicaGroup=default,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDY0MzI1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wNjQzMjVa
+cn: pvcomsds
+ibm-replicaserverid: pvcomsds
+ibm-replicationserverismaster: TRUE
+objectclass: top
+objectclass: ibm-replicasubentry
+ibm-entryuuid: 11dc54c0-1b2a-103f-b727-9dd972f1d992
+
+dn: cn=pvcomsds2,cn=pvcomsds,ibm-replicaGroup=default,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDY2NzE0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDEwNDE0Ny42MjA4OTBa
+ibm-replicaconsumerconnections: 3
+ibm-replicaconsumerid: pvcomsds2
+ibm-replicacredentialsdn: cn=replcred,cn=replication,cn=IBMpolicies
+ibm-replicamethod: 2
+ibm-replicaurl: ldap://isvd-secondary-server:9389
+objectclass: top
+objectclass: ibm-replicationagreement
+cn: pvcomsds2
+ibm-replicationonhold: FALSE
+ibm-entryuuid: 11dc54c0-1b2a-103f-b728-9dd972f1d992
+
+dn: cn=pvcomsds2,ibm-replicaGroup=default,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDkwMDc1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wOTAwNzVa
+cn: pvcomsds2
+ibm-replicaserverid: pvcomsds2
+ibm-replicationserverismaster: TRUE
+objectclass: top
+objectclass: ibm-replicasubentry
+ibm-entryuuid: 11dc54c0-1b2a-103f-b729-9dd972f1d992
+
+dn: cn=pvcomsds,cn=pvcomsds2,ibm-replicaGroup=default,dc=pvb,dc=vn
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDkyNjI5Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wOTI2Mjla
+ibm-replicaconsumerconnections: 3
+ibm-replicaconsumerid: pvcomsds
+ibm-replicacredentialsdn: cn=replcred,cn=replication,cn=IBMpolicies
+ibm-replicamethod: 2
+ibm-replicaurl: ldap://isvd-server:9389
+objectclass: top
+objectclass: ibm-replicationagreement
+cn: pvcomsds
+ibm-entryuuid: 11dc54c0-1b2a-103f-b72a-9dd972f1d992
+
+dn: ibm-replicaGroup=default,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDk3ODM2Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wOTc4MzZa
+ibm-replicaGroup: default
+objectclass: top
+objectclass: ibm-replicaGroup
+ibm-entryuuid: 11dc54c0-1b2a-103f-b72b-9dd972f1d992
+
+dn: cn=pvcomsds,ibm-replicaGroup=default,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMDk5OTgwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4wOTk5ODBa
+cn: pvcomsds
+ibm-replicaserverid: pvcomsds
+ibm-replicationserverismaster: TRUE
+objectclass: top
+objectclass: ibm-replicasubentry
+ibm-entryuuid: 11dc54c0-1b2a-103f-b72c-9dd972f1d992
+
+dn: cn=pvcomsds2,cn=pvcomsds,ibm-replicaGroup=default,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMTAyMzg4Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4xMDIzODha
+ibm-replicaconsumerconnections: 3
+ibm-replicaconsumerid: pvcomsds2
+ibm-replicacredentialsdn: cn=replcred,cn=replication,cn=IBMpolicies
+ibm-replicamethod: 2
+ibm-replicaurl: ldap://isvd-secondary-server:9389
+objectclass: top
+objectclass: ibm-replicationagreement
+cn: pvcomsds2
+ibm-entryuuid: 11dc54c0-1b2a-103f-b72d-9dd972f1d992
+
+dn: cn=pvcomsds2,ibm-replicaGroup=default,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMTIyNjY1Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4xMjI2NjVa
+cn: pvcomsds2
+ibm-replicaserverid: pvcomsds2
+ibm-replicationserverismaster: TRUE
+objectclass: top
+objectclass: ibm-replicasubentry
+ibm-entryuuid: 11dc54c0-1b2a-103f-b72e-9dd972f1d992
+
+dn: cn=pvcomsds,cn=pvcomsds2,ibm-replicaGroup=default,secAuthority=Default
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAyNDEwMTAwODA0NTEuMTI1MzI0Wj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDI0MTAxMDA4MDQ1MS4xMjUzMjRa
+ibm-replicaconsumerconnections: 3
+ibm-replicaconsumerid: pvcomsds
+ibm-replicacredentialsdn: cn=replcred,cn=replication,cn=IBMpolicies
+ibm-replicamethod: 2
+ibm-replicaurl: ldap://isvd-server:9389
+objectclass: top
+objectclass: ibm-replicationagreement
+cn: pvcomsds
+ibm-entryuuid: 11dc54c0-1b2a-103f-b72f-9dd972f1d992
