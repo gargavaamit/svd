@@ -118,6 +118,11 @@ data:
         port: 9636
         secure: false
         admin-port: 3538
+      - label: isvd-proxy-nonssl
+        host: 172.20.85.196
+        port: 9636
+        secure: false
+        admin-port: 3538
         
 
     keyfile:
