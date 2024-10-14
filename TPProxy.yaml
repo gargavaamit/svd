@@ -93,13 +93,11 @@ data:
     debug:
       startup: true
     advanced:
-      attr:
-        name: ibm-slapdSetEnv
-        operation: "add"
+    - attr:
+      - name: ibm-slapdSetEnv
         values:
-          'SSL_TIMEOUT_MILLISEC=5000'
-      dn: cn=Front End, cn=Configuration
-         
+         - 'SSL_TIMEOUT_MILLISEC=5000'
+      dn: cn=Front End, cn=Configuration         
          
     general:
       admin:
