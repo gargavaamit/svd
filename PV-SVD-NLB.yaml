@@ -6,6 +6,7 @@ metadata:
     app: isvd-proxy-server1
   annotations:
     #service.beta.kubernetes.io/aws-load-balancer-type: nlb    # To create Network Load Balancer
+    external-dns.alpha.kubernetes.io/hostname: svd.dev.ciam.apps.svam.nonprod.pvcombank.io
     service.beta.kubernetes.io/aws-load-balancer-healthcheck-healthy-threshold: "2"
     service.beta.kubernetes.io/aws-load-balancer-healthcheck-interval: "10"
     service.beta.kubernetes.io/aws-load-balancer-healthcheck-timeout: "4"
