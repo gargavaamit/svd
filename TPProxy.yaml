@@ -92,6 +92,15 @@ data:
   config.yaml: |
     debug:
       startup: true
+    advanced:
+      attr:
+        name: ibm-slapdSetEnv
+        operation: "add"
+        values:
+          'SSL_TIMEOUT_MILLISEC=5000'
+      dn: cn=Front End, cn=Configuration
+         
+         
     general:
       admin:
         pwd: passw0rd1
