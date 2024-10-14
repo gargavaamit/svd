@@ -107,6 +107,10 @@ data:
         cert-label: 'server-key'
       audit:
         enabled: true
+        log-to-file: true
+        operation:
+          search: true
+      json-logging: false
     proxy:
       server-groups:
       - name: serverGroup1
