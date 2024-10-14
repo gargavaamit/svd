@@ -1,0 +1,9 @@
+-----------ssl.ldif---------------
+
+dn: cn=Front End, cn=Configuration
+
+
+changetype: modify
+add: ibm-slapdSetEnv
+ibm-slapdSetenv: SSL_TIMEOUT_MILLISEC=5000
+----------------------------------
