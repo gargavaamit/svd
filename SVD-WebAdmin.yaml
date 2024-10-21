@@ -104,22 +104,22 @@ data:
     webadmin:
       servers:
       - label: isvd-server
-        host: 172.20.98.1
+        host: isvd-server
         port: 9389
         secure: false
         admin-port: 3538
       - label: isvd-server-secondary
-        host: 172.20.59.59
+        host: isvd-secondary-server
         port: 9389
         secure: false
         admin-port: 3538
       - label: isvd-proxy
-        host: 172.20.85.196
+        host: isvd-proxy
         port: 9636
         secure: false
         admin-port: 3538
       - label: isvd-proxy-nonssl
-        host: 172.20.85.196
+        host: isvd-proxy
         port: 9389
         secure: false
         admin-port: 3538
