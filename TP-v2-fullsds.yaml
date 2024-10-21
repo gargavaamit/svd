@@ -109,6 +109,10 @@ data:
         pwd: passw0rd1
       ssl:
         cert-label: 'server-key'
+        protocols:
+        - TLS10
+        
+        
       audit:
         enabled: true
         log-to-file: true
