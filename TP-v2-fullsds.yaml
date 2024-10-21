@@ -109,7 +109,8 @@ data:
         pwd: passw0rd1
       ssl:
         cert-label: 'server-key'
-          
+        protocols: 
+        - 'TLS10'
         
       audit:
         enabled: true
@@ -125,7 +126,7 @@ data:
           modify-dn: true
           search: true
           unbind: true
-      pwd-encryption: "pbkdf2-sha256"
+      
       pwd-policy:
         enabled: true
         failure-count-interval: 0
